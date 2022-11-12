@@ -26,7 +26,8 @@ Let's make it one by one, screenshots are attached below.
 
 5.1 Let's start with `countries` table.
 
-```CREATE TABLE countries(
+```
+CREATE TABLE countries(
 country_id int NOT NULL,
 country_name varchar(25) NOT NULL,
 language varchar(15) NOT NULL,
