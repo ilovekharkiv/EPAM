@@ -121,7 +121,7 @@ mysql> SELECT language,COUNT(language) FROM countries GROUP BY language;
 
 ```
 6.2 `SELECT artist_id, first_name, last_name FROM artists WHERE age<40;`
-```
+```bash
 mysql> SELECT artist_id, first_name, last_name FROM artists WHERE age<40;
 +-----------+------------+-----------+
 | artist_id | first_name | last_name |
