@@ -90,3 +90,46 @@ VALUES
 ```
 
 ![This is a alt text.](/Screenshots/07.png "labels")
+
+### 6. Construct and execute SELECT operator with WHERE, GROUP BY and ORDER BY.
+
+6.1 `SELECT country_id, language FROM countries GROUP BY country_id;`
+
+```
+mysql> SELECT country_id, language FROM countries GROUP BY country_id;
++------------+-----------+
+| country_id | language  |
++------------+-----------+
+|          3 | Ukrainian |
+|          5 | English   |
+|          7 | English   |
+|          9 | Polski    |
+|         11 | English   |
++------------+-----------+
+5 rows in set (0,00 sec)
+
+```
+6.2  ```SELECT artists.artist_id, artists.first_name, artists.last_name, countries.country_name, countries.language, labels.release_name
+FROM labels
+RIGHT JOIN countries ON labels.country_id=countries.country_id
+LEFT JOIN artists ON labels.label_id=artists.label_id
+ORDER BY artists.artist_id;
+```
+
+```
+mysql> SELECT artists.artist_id, artists.first_name, artists.last_name, countries.country_name, countries.language, labels.release_name
+    -> FROM labels
+    -> RIGHT JOIN countries ON labels.country_id=countries.country_id
+    -> LEFT JOIN artists ON labels.label_id=artists.label_id
+    -> ORDER BY artists.artist_id;
++-----------+------------+-----------------+--------------+-----------+---------------------+
+| artist_id | first_name | last_name       | country_name | language  | release_name        |
++-----------+------------+-----------------+--------------+-----------+---------------------+
+|       101 | Armin      | Van Buuren      | UA           | Ukrainian | Ukraine The Best    |
+|       201 | Martin     | Garrix          | USA          | English   | Thx Poland releases |
+|       301 | Marika     | Rossa           | UK           | English   | Ukraine The Best    |
+|       401 | Tijs       | Michiel Verwest | CAN          | English   | Test task for Epam  |
+|       501 | David      | Guetta          | PL           | Polski    | Random one          |
++-----------+------------+-----------------+--------------+-----------+---------------------+
+5 rows in set (0,00 sec)
+```
