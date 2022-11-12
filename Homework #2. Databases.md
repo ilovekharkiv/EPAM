@@ -18,12 +18,11 @@ show databases;
 ![This is a alt text.](/Screenshots/03.png "Database schema")
 
 ### 4. Create a database on the server through the console.
-We created the database with `CREATE TABLE Music;` command, used it an checked whether it has any table or not.
-
+We created the database with `CREATE TABLE Music;`, used it an checked whether it has any table or not.
 ![This is a alt text.](/Screenshots/04.png "Database creation")
 
 ### 5. Fill in tables.
-Let's create the tables one by one, screenshots are attached below.
+Let's make it one by one, screenshots are attached below.
 
 5.1 Let's start with `countries` table.
 
@@ -91,11 +90,22 @@ VALUES
 
 ![This is a alt text.](/Screenshots/07.png "labels")
 
+5.4 Just to make sure that relations have been setup properly, let's check the database schema with MySQL Workbench.
+
+![This is a alt text.](/Screenshots/08.png "labels")
+
+5.5 Also let's check the data in every table, just to make sure it's in place and set up properly.
+
+![This is a alt text.](/Screenshots/09.png "labels")
+![This is a alt text.](/Screenshots/010.png "labels")
+![This is a alt text.](/Screenshots/011.png "labels")
+
+
 ### 6. Construct and execute SELECT operator with WHERE, GROUP BY and ORDER BY.
 
 6.1 `SELECT country_id, language FROM countries GROUP BY country_id;`
 
-```
+``` 
 mysql> SELECT country_id, language FROM countries GROUP BY country_id;
 +------------+-----------+
 | country_id | language  |
@@ -107,8 +117,11 @@ mysql> SELECT country_id, language FROM countries GROUP BY country_id;
 |         11 | English   |
 +------------+-----------+
 5 rows in set (0,00 sec)
+
 ```
-6.2  
+6.2
+
+6.3  Let's try a little bit more complicated query
 
 ```
 mysql> SELECT artists.artist_id, artists.first_name, artists.last_name, countries.country_name, countries.language, labels.release_name
