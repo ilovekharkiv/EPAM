@@ -154,3 +154,13 @@ mysql> SELECT artists.artist_id, artists.first_name, artists.last_name, countrie
 5 rows in set (0,00 sec)
 
 ```
+
+### 7. Execute other different SQL queries DDL, DML, DCL.
+
+7.1 DDL commands are;
+* **CREATE**: This command is used to create the database or its objects (like table, index, function, views, store procedure, and triggers).
+* **DROP**: This command is used to delete objects from the database.
+* **ALTER**: This is used to alter the structure of the database.
+* **TRUNCATE**: This is used to remove all records from a table, including all spaces allocated for the records are removed.
+* **COMMENT**: This is used to add comments to the data dictionary.
+* **RENAME**: This is used to rename an object existing in the database.
