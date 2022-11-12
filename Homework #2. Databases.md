@@ -107,14 +107,8 @@ mysql> SELECT country_id, language FROM countries GROUP BY country_id;
 |         11 | English   |
 +------------+-----------+
 5 rows in set (0,00 sec)
-
 ```
-6.2  ```SELECT artists.artist_id, artists.first_name, artists.last_name, countries.country_name, countries.language, labels.release_name
-FROM labels
-RIGHT JOIN countries ON labels.country_id=countries.country_id
-LEFT JOIN artists ON labels.label_id=artists.label_id
-ORDER BY artists.artist_id;
-```
+6.2  
 
 ```
 mysql> SELECT artists.artist_id, artists.first_name, artists.last_name, countries.country_name, countries.language, labels.release_name
@@ -132,4 +126,5 @@ mysql> SELECT artists.artist_id, artists.first_name, artists.last_name, countrie
 |       501 | David      | Guetta          | PL           | Polski    | Random one          |
 +-----------+------------+-----------------+--------------+-----------+---------------------+
 5 rows in set (0,00 sec)
+
 ```
