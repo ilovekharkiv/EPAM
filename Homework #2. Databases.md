@@ -23,7 +23,7 @@ We created the database with `CREATE TABLE Music;` command, used it an checked w
 ![This is a alt text.](/Screenshots/04.png "Database creation")
 
 ### 5. Fill in tables.
-Let's make it one by one, screenshots are attached below.
+Let's create the tables one by one, screenshots are attached below.
 
 5.1 Let's start with `countries` table.
 
