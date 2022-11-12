@@ -19,6 +19,7 @@ show databases;
 
 ### 4. Create a database on the server through the console.
 We created the database, used it an checked whether it has any table or not.
+
 ![This is a alt text.](/Screenshots/04.png "Database creation")
 
 ### 5. Fill in tables.
