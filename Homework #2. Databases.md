@@ -106,23 +106,33 @@ VALUES
 
 ### 6. Construct and execute SELECT operator with WHERE, GROUP BY and ORDER BY.
 
-6.1 `SELECT country_id, language FROM countries GROUP BY country_id;`
+6.1 `SELECT language,COUNT(language) FROM countries GROUP BY language;`
 
 ``` 
-mysql> SELECT country_id, language FROM countries GROUP BY country_id;
-+------------+-----------+
-| country_id | language  |
-+------------+-----------+
-|          3 | Ukrainian |
-|          5 | English   |
-|          7 | English   |
-|          9 | Polski    |
-|         11 | English   |
-+------------+-----------+
-5 rows in set (0,00 sec)
+mysql> SELECT language,COUNT(language) FROM countries GROUP BY language;
++-----------+-----------------+
+| language  | COUNT(language) |
++-----------+-----------------+
+| Ukrainian |               1 |
+| English   |               3 |
+| Polski    |               1 |
++-----------+-----------------+
+3 rows in set (0,00 sec)
 
 ```
-6.2
+6.2 `SELECT artist_id, first_name, last_name FROM artists WHERE age<40;`
+```
+mysql> SELECT artist_id, first_name, last_name FROM artists WHERE age<40;
++-----------+------------+-----------+
+| artist_id | first_name | last_name |
++-----------+------------+-----------+
+|       201 | Martin     | Garrix    |
+|       301 | Marika     | Rossa     |
++-----------+------------+-----------+
+2 rows in set (0,00 sec)
+
+```
+
 
 6.3  Let's try a little bit more complicated query
 
