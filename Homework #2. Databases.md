@@ -1,7 +1,7 @@
 ## Part 1
 ### 1. Download MySQL server for your OS on VM.
 ### 2. Install MySQL server on VM. 
->However, I didn't use VM, since i have a separate SSD with Ubuntu 22.04 for work/practice. It works faster and more convenient comparing to VMs.
+>I didn't use VM, since i have a separate SSD with Ubuntu 22.04 for work/practice. It works faster and more convenient comparing to VMs.
 
 2.1. Follow the instructions [to install MySQL](https://linuxhint.com/install-mysql-on-ubuntu-22-04/#:~:text=To%20install%20MySQL%20on%20Ubuntu%2022.04%2C%20first%2C%20execute%20the%20system,the%20%E2%80%9Csudo%20mysql_secure_installation%E2%80%9D%20command.) according to the guide.
 
@@ -157,10 +157,25 @@ mysql> SELECT artists.artist_id, artists.first_name, artists.last_name, countrie
 
 ### 7. Execute other different SQL queries DDL, DML, DCL.
 
+>Most of the most commonly used commands are shown in this guide. I understand the commands and their purpose, but using ALL of them right now will slow me down a lot with this task, so that i'll leave a description with examples.
+
 7.1 DDL commands are;
 * **CREATE**: This command is used to create the database or its objects (like table, index, function, views, store procedure, and triggers).
-* **DROP**: This command is used to delete objects from the database.
-* **ALTER**: This is used to alter the structure of the database.
-* **TRUNCATE**: This is used to remove all records from a table, including all spaces allocated for the records are removed.
-* **COMMENT**: This is used to add comments to the data dictionary.
-* **RENAME**: This is used to rename an object existing in the database.
+* **DROP**: This command is used to delete objects from the database. `DROP TABLE artists` will delete my `artists` table.
+* **ALTER**: This is used to alter the structure of the database. I used `ALTER TABLE` to add `FOREIGN KEY` to my table while practising;
+* **TRUNCATE**: This is used to remove all records from a table, including all spaces allocated for the records are removed. `TRUNCATE TABLE artists` will delete ALL records from my `artists` table
+* **COMMENT**: This is used to add comments to the data dictionary. `SELECT artist_id /* Comment goes here */ FROM artists;` will show the `artist_id` from my `artist` table.
+* **RENAME**: This is used to rename an object existing in the database. `RENAME TABLE countries TO country;` will rename the table `countries` to table `country`
+
+
+7.2 DML commands are;
+* **INSERT** : It is used to insert data into a table.
+* **UPDATE**: It is used to update existing data within a table. `UPDATE countries SET country_name='UA'` will update the column `country_name` from the `country` table;
+* **DELETE** : It is used to delete records from a database table. `DELETE FROM Music.artists WHERE artist_id=505;` will delete one of my artists from `artists` table with `artist_id` equal to `501`.
+* **LOCK**: Table control concurrency. `LOCK TABLE countries READ;` will lock `countries` tables from writing.
+* **CALL**: Call a PL/SQL or JAVA subprogram.
+* **EXPLAIN PLAN**: It describes the access path to data.
+
+7.3 
+* **GRANT**: This command gives users access privileges to the database.
+* **REVOKE**: This command withdraws the user’s access privileges given by using the GRANT command.
