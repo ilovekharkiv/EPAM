@@ -48,7 +48,8 @@ VALUES
 
 5.2 Let's continue with `labels` table
 
-```CREATE TABLE labels(
+```
+CREATE TABLE labels(
 label_id int NOT NULL AUTO_INCREMENT,
 release_name varchar(50) NOT NULL,
 country_id int NOT NULL,
@@ -69,7 +70,8 @@ VALUES
 
 5.3 The last but not least is `artists` table
 
-```CREATE TABLE artists(
+```
+CREATE TABLE artists(
 artist_id int NOT NULL,
 first_name varchar(60) NOT NULL,
 last_name varchar(60) NOT NULL,
