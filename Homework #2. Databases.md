@@ -18,7 +18,7 @@ show databases;
 ![This is a alt text.](/Screenshots/03.png "Database schema")
 
 ### 4. Create a database on the server through the console.
-We created the database with `CREATE TABLE Music` command, used it an checked whether it has any table or not.
+We created the database with `CREATE TABLE Music;` command, used it an checked whether it has any table or not.
 
 ![This is a alt text.](/Screenshots/04.png "Database creation")
 
