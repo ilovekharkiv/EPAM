@@ -157,25 +157,27 @@ mysql> SELECT artists.artist_id, artists.first_name, artists.last_name, countrie
 
 ### 7. Execute other different SQL queries DDL, DML, DCL.
 
->Most of the most commonly used commands are shown in this guide. I understand the commands and their purpose, but using ALL of them right now will slow me down a lot with this task, so that i'll leave a description with examples.
+>The most commonly used commands are shown in this guide. I understand the commands and their purpose, but using ALL of them right now will slow me down a lot with this task, so that i'll leave a description with examples.
 
-7.1 DDL commands are;
+7.1 DDL commands are:
 * **CREATE**: This command is used to create the database or its objects (like table, index, function, views, store procedure, and triggers).
 * **DROP**: This command is used to delete objects from the database. `DROP TABLE artists` will delete my `artists` table.
 * **ALTER**: This is used to alter the structure of the database. I used `ALTER TABLE` to add `FOREIGN KEY` to my table while practising;
-* **TRUNCATE**: This is used to remove all records from a table, including all spaces allocated for the records are removed. `TRUNCATE TABLE artists` will delete ALL records from my `artists` table
+* **TRUNCATE**: This is used to remove all records from a table, including all spaces allocated for the records are removed. `TRUNCATE TABLE artists;` will delete ALL records from my `artists` table
 * **COMMENT**: This is used to add comments to the data dictionary. `SELECT artist_id /* Comment goes here */ FROM artists;` will show the `artist_id` from my `artist` table.
 * **RENAME**: This is used to rename an object existing in the database. `RENAME TABLE countries TO country;` will rename the table `countries` to table `country`
 
 
-7.2 DML commands are;
+7.2 DML commands are:
 * **INSERT** : It is used to insert data into a table.
-* **UPDATE**: It is used to update existing data within a table. `UPDATE countries SET country_name='UA'` will update the column `country_name` from the `country` table;
+* **UPDATE**: It is used to update existing data within a table. `UPDATE countries SET country_name='UA';` will update the column `country_name` from the `country` table;
 * **DELETE** : It is used to delete records from a database table. `DELETE FROM Music.artists WHERE artist_id=505;` will delete one of my artists from `artists` table with `artist_id` equal to `501`.
 * **LOCK**: Table control concurrency. `LOCK TABLE countries READ;` will lock `countries` tables from writing.
 * **CALL**: Call a PL/SQL or JAVA subprogram.
 * **EXPLAIN PLAN**: It describes the access path to data.
 
-7.3 
+7.3 DCL commands are:
 * **GRANT**: This command gives users access privileges to the database.
 * **REVOKE**: This command withdraws the user’s access privileges given by using the GRANT command.
+
+### 8. Create a database of new users with different privileges. Connect to the database as a new user and verify that the privileges allow or deny certain actions.
