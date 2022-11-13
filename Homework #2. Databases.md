@@ -21,7 +21,7 @@
 ![This is a alt text.](/Screenshots/01.png "mysql service")
 
 2.3. Check the existing databases with the following command 
-```ruby
+```bash
 show databases;
 ```
 ![This is a alt text.](/Screenshots/02.png "show databases")
@@ -38,7 +38,7 @@ Let's make it one by one, screenshots are attached below.
 
 5.1 Let's start with `countries` table.
 
-```ruby
+```bash
 CREATE TABLE countries(
 country_id int NOT NULL,
 country_name varchar(25) NOT NULL,
@@ -60,7 +60,7 @@ VALUES
 
 5.2 Let's continue with `labels` table
 
-```ruby
+```bash
 CREATE TABLE labels(
 label_id int NOT NULL AUTO_INCREMENT,
 release_name varchar(50) NOT NULL,
@@ -82,7 +82,7 @@ VALUES
 
 5.3 The last but not least is `artists` table
 
-```ruby
+```bash
 CREATE TABLE artists(
 artist_id int NOT NULL,
 first_name varchar(60) NOT NULL,
@@ -120,7 +120,7 @@ VALUES
 
 6.1 `SELECT language,COUNT(language) FROM countries GROUP BY language;`
 
-```ruby 
+```bash 
 mysql> SELECT language,COUNT(language) FROM countries GROUP BY language;
 +-----------+-----------------+
 | language  | COUNT(language) |
@@ -133,7 +133,7 @@ mysql> SELECT language,COUNT(language) FROM countries GROUP BY language;
 
 ```
 6.2 `SELECT artist_id, first_name, last_name FROM artists WHERE age<40;`
-```ruby
+```bash
 mysql> SELECT artist_id, first_name, last_name FROM artists WHERE age<40;
 +-----------+------------+-----------+
 | artist_id | first_name | last_name |
@@ -146,7 +146,7 @@ mysql> SELECT artist_id, first_name, last_name FROM artists WHERE age<40;
 ```
 6.3  Let's try a little bit more complicated query
 
-```ruby
+```bash
 mysql> SELECT artists.artist_id, artists.first_name, artists.last_name, countries.country_name, countries.language, labels.release_name
     -> FROM labels
     -> RIGHT JOIN countries ON labels.country_id=countries.country_id
@@ -200,7 +200,7 @@ mysql> SELECT artists.artist_id, artists.first_name, artists.last_name, countrie
 `GRANT CREATE, INSERT, UPDATE, SELECT on Music.Countries TO 'testuser'@'localhost' WITH GRANT OPTION;`
 
 8.4 Make sure `PRIVELEGES` set up
-```ruby
+```bash
 mysql> SHOW GRANTS FOR 'testuser'@'localhost';
 +---------------------------------------------------------------------------------------------------------+
 | Grants for testuser@localhost                                                                           |
