@@ -278,3 +278,7 @@ mysql> SELECT Host,Db,User,Select_priv FROM db;
 ## Part 2
 
 ### 10. Make backup of your database 
+ 
+Let's make a backup of my `Music` database using `mysqldump` command. The results will be shown on the screen below.
+
+![This is a alt text.](/Screenshots/013.png ",mysqldump")
