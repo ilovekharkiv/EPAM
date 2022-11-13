@@ -10,6 +10,9 @@
 8. [Create a database of new users with different privileges. Connect to the database as a new user and verify that the privileges allow or deny certain actions.](https://github.com/ilovekharkov/EPAM/blob/master/Homework%20%232.%20Databases.md#8-create-a-database-of-new-users-with-different-privileges-connect-to-the-database-as-a-new-user-and-verify-that-the-privileges-allow-or-deny-certain-actions) 
 9. [Make a selection from the main table DB MySQL](https://github.com/ilovekharkov/EPAM/blob/master/Homework%20%232.%20Databases.md#9-make-a-selection-from-the-main-table-db-mysql) 
 
+#### [Part 2](https://github.com/ilovekharkov/EPAM/blob/master/Homework%20%232.%20Databases.md#part-1)
+1. 
+
 
 ## Part 1
 ### 1. Download MySQL server for your OS on VM
@@ -260,7 +263,6 @@ mysql> SELECT * FROM countries;
 +------------+--------------+-----------+------------+
 5 rows in set (0,00 sec)
 ```
-
 ### 9 Make a selection from the main table DB MySQL
 ```bash
 mysql> SELECT Host,Db,User,Select_priv FROM db;
@@ -273,3 +275,6 @@ mysql> SELECT Host,Db,User,Select_priv FROM db;
 2 rows in set (0,00 sec)
 
 ```
+## Part 2
+
+### 10. Make backup of your database 
