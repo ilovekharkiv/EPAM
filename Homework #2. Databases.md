@@ -1,6 +1,18 @@
+# Table of Contents
+#### [Part 1](https://github.com/ilovekharkov/EPAM/blob/master/Homework%20%232.%20Databases.md#part-1)
+1. [Download MySQL server for your OS on VM](https://github.com/ilovekharkov/EPAM/blob/master/Homework%20%232.%20Databases.md#part-1)
+2. [Install MySQL server on VM](https://github.com/ilovekharkov/EPAM/blob/master/Homework%20%232.%20Databases.md#2-install-mysql-server-on-vm) 
+3. [Select a subject area and describe the database schema](https://github.com/ilovekharkov/EPAM/blob/master/Homework%20%232.%20Databases.md#3-select-a-subject-area-and-describe-the-database-schema) 
+4. [Create a database on the server through the console](https://github.com/ilovekharkov/EPAM/blob/master/Homework%20%232.%20Databases.md#4-create-a-database-on-the-server-through-the-console) 
+5. [Fill in tables](https://github.com/ilovekharkov/EPAM/blob/master/Homework%20%232.%20Databases.md#5-fill-in-tables) 
+6. [Construct and execute SELECT operator with WHERE, GROUP BY and ORDER BY](https://github.com/ilovekharkov/EPAM/blob/master/Homework%20%232.%20Databases.md#6-construct-and-execute-select-operator-with-where-group-by-and-order-by) 
+7. [Execute other different SQL queries DDL, DML, DCL.](https://github.com/ilovekharkov/EPAM/blob/master/Homework%20%232.%20Databases.md#6-construct-and-execute-select-operator-with-where-group-by-and-order-by) 
+8. [Create a database of new users with different privileges. Connect to the database as a new user and verify that the privileges allow or deny certain actions.](https://github.com/ilovekharkov/EPAM/blob/master/Homework%20%232.%20Databases.md#8-create-a-database-of-new-users-with-different-privileges-connect-to-the-database-as-a-new-user-and-verify-that-the-privileges-allow-or-deny-certain-actions) 
+
+
 ## Part 1
-### 1. Download MySQL server for your OS on VM.
-### 2. Install MySQL server on VM. 
+### 1. Download MySQL server for your OS on VM
+### 2. Install MySQL server on VM 
 >I didn't use VM, since i have a separate SSD with Ubuntu 22.04 for work/practice. It works faster and more convenient comparing to VMs.
 
 2.1. Follow the instructions [to install MySQL](https://linuxhint.com/install-mysql-on-ubuntu-22-04/#:~:text=To%20install%20MySQL%20on%20Ubuntu%2022.04%2C%20first%2C%20execute%20the%20system,the%20%E2%80%9Csudo%20mysql_secure_installation%E2%80%9D%20command.) according to the guide.
@@ -14,14 +26,14 @@ show databases;
 ```
 ![This is a alt text.](/Screenshots/02.png "show databases")
 
-### 3. Select a subject area and describe the database schema.
+### 3. Select a subject area and describe the database schema
 ![This is a alt text.](/Screenshots/03.png "Database schema")
 
-### 4. Create a database on the server through the console.
+### 4. Create a database on the server through the console
 We created the database with `CREATE TABLE Music;`, used it an checked whether it has any table or not.
 ![This is a alt text.](/Screenshots/04.png "Database creation")
 
-### 5. Fill in tables.
+### 5. Fill in tables
 Let's make it one by one, screenshots are attached below.
 
 5.1 Let's start with `countries` table.
@@ -104,7 +116,7 @@ VALUES
 ![This is a alt text.](/Screenshots/011.png "labels")
 
 
-### 6. Construct and execute SELECT operator with WHERE, GROUP BY and ORDER BY.
+### 6. Construct and execute SELECT operator with WHERE, GROUP BY and ORDER BY
 
 6.1 `SELECT language,COUNT(language) FROM countries GROUP BY language;`
 
@@ -155,7 +167,7 @@ mysql> SELECT artists.artist_id, artists.first_name, artists.last_name, countrie
 
 ```
 
-### 7. Execute other different SQL queries DDL, DML, DCL.
+### 7. Execute other different SQL queries DDL, DML, DCL
 
 >The most commonly used commands are shown in this guide. I understand the commands and their purpose, but using ALL of them right now will slow me down a lot with this task, so that i'll leave a description with examples.
 
@@ -180,4 +192,4 @@ mysql> SELECT artists.artist_id, artists.first_name, artists.last_name, countrie
 * **GRANT**: This command gives users access privileges to the database.
 * **REVOKE**: This command withdraws the user’s access privileges given by using the GRANT command.
 
-### 8. Create a database of new users with different privileges. Connect to the database as a new user and verify that the privileges allow or deny certain actions.
+### 8. Create a database of new users with different privileges. Connect to the database as a new user and verify that the privileges allow or deny certain actions
