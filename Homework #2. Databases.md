@@ -12,9 +12,9 @@
 
 #### [Part 2](https://github.com/ilovekharkov/EPAM/blob/master/Homework%20%232.%20Databases.md#part-2-1)
 10. [Make backup of your database](https://github.com/ilovekharkov/EPAM/blob/master/Homework%20%232.%20Databases.md#10-make-backup-of-your-database) 
-11. [Delete the table and/or part of the data in the table.]()
-12. [Restore your database.]() 
-13. [Restore your database.]() 
+11. [Delete the table and/or part of the data in the table.](https://github.com/ilovekharkov/EPAM/blob/master/Homework%20%232.%20Databases.md#11-delete-the-table-andor-part-of-the-data-in-the-table)
+12. [Restore your database.](https://github.com/ilovekharkov/EPAM/blob/master/Homework%20%232.%20Databases.md#12-restore-your-database) 
+13. [Transfer your local database to RDS AWS.]() 
 14. [Restore your database.]() 
 15. [Restore your database.]() 
 16. [Restore your database.]() 
@@ -432,3 +432,5 @@ mysql> SELECT * FROM artists;
 +-----------+------------+-----------------+----------+-----+--------+
 5 rows in set (0,00 sec)
 ```
+
+![This is a alt text.](/Screenshots/014.png "artists")
