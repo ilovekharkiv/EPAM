@@ -21,7 +21,7 @@
 ![This is a alt text.](/Screenshots/01.png "mysql service")
 
 2.3. Check the existing databases with the following command 
-```bash
+```ruby
 show databases;
 ```
 ![This is a alt text.](/Screenshots/02.png "show databases")
@@ -38,7 +38,7 @@ Let's make it one by one, screenshots are attached below.
 
 5.1 Let's start with `countries` table.
 
-```bash
+```ruby
 CREATE TABLE countries(
 country_id int NOT NULL,
 country_name varchar(25) NOT NULL,
@@ -60,7 +60,7 @@ VALUES
 
 5.2 Let's continue with `labels` table
 
-```bash
+```ruby
 CREATE TABLE labels(
 label_id int NOT NULL AUTO_INCREMENT,
 release_name varchar(50) NOT NULL,
@@ -82,7 +82,7 @@ VALUES
 
 5.3 The last but not least is `artists` table
 
-```bash
+```ruby
 CREATE TABLE artists(
 artist_id int NOT NULL,
 first_name varchar(60) NOT NULL,
@@ -103,24 +103,24 @@ VALUES
 (501, 'David','Guetta',4,40,15.45);
 ```
 
-![This is a alt text.](/Screenshots/07.png "labels")
+![This is a alt text.](/Screenshots/07.png "artists")
 
 5.4 Just to make sure that relations have been setup properly, let's check the database schema with MySQL Workbench.
 
-![This is a alt text.](/Screenshots/08.png "labels")
+![This is a alt text.](/Screenshots/08.png "workbench")
 
 5.5 Also let's check the data in every table, just to make sure it's in place and set up properly.
 
-![This is a alt text.](/Screenshots/09.png "labels")
+![This is a alt text.](/Screenshots/09.png "countries")
 ![This is a alt text.](/Screenshots/010.png "labels")
-![This is a alt text.](/Screenshots/011.png "labels")
+![This is a alt text.](/Screenshots/011.png "artists")
 
 
 ### 6. Construct and execute SELECT operator with WHERE, GROUP BY and ORDER BY
 
 6.1 `SELECT language,COUNT(language) FROM countries GROUP BY language;`
 
-```bash 
+```ruby 
 mysql> SELECT language,COUNT(language) FROM countries GROUP BY language;
 +-----------+-----------------+
 | language  | COUNT(language) |
@@ -133,7 +133,7 @@ mysql> SELECT language,COUNT(language) FROM countries GROUP BY language;
 
 ```
 6.2 `SELECT artist_id, first_name, last_name FROM artists WHERE age<40;`
-```bash
+```ruby
 mysql> SELECT artist_id, first_name, last_name FROM artists WHERE age<40;
 +-----------+------------+-----------+
 | artist_id | first_name | last_name |
@@ -144,11 +144,9 @@ mysql> SELECT artist_id, first_name, last_name FROM artists WHERE age<40;
 2 rows in set (0,00 sec)
 
 ```
-
-
 6.3  Let's try a little bit more complicated query
 
-```bash
+```ruby
 mysql> SELECT artists.artist_id, artists.first_name, artists.last_name, countries.country_name, countries.language, labels.release_name
     -> FROM labels
     -> RIGHT JOIN countries ON labels.country_id=countries.country_id
@@ -166,7 +164,6 @@ mysql> SELECT artists.artist_id, artists.first_name, artists.last_name, countrie
 5 rows in set (0,00 sec)
 
 ```
-
 ### 7. Execute other different SQL queries DDL, DML, DCL
 
 >The most commonly used commands are shown in this guide. I understand the commands and their purpose, but using ALL of them right now will slow me down a lot with this task, so that i'll leave a description with examples.
@@ -178,7 +175,6 @@ mysql> SELECT artists.artist_id, artists.first_name, artists.last_name, countrie
 * **TRUNCATE**: This is used to remove all records from a table, including all spaces allocated for the records are removed. `TRUNCATE TABLE artists;` will delete ALL records from my `artists` table
 * **COMMENT**: This is used to add comments to the data dictionary. `SELECT artist_id /* Comment goes here */ FROM artists;` will show the `artist_id` from my `artist` table.
 * **RENAME**: This is used to rename an object existing in the database. `RENAME TABLE countries TO country;` will rename the table `countries` to table `country`
-
 
 7.2 DML commands are:
 * **INSERT** : It is used to insert data into a table.
@@ -193,3 +189,28 @@ mysql> SELECT artists.artist_id, artists.first_name, artists.last_name, countrie
 * **REVOKE**: This command withdraws the user’s access privileges given by using the GRANT command.
 
 ### 8. Create a database of new users with different privileges. Connect to the database as a new user and verify that the privileges allow or deny certain actions
+
+8.1 Let's create a user 
+`CREATE USER 'testuser'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Password123#@!';`
+
+8.2 Make sure he exists
+![This is a alt text.](/Screenshots/012.png "testuser")
+
+8.3 We need to give him access rights 
+`GRANT CREATE, INSERT, UPDATE, SELECT on Music.Countries TO 'testuser'@'localhost' WITH GRANT OPTION;`
+
+8.4 Make sure `PRIVELEGES` set up
+```ruby
+mysql> SHOW GRANTS FOR 'testuser'@'localhost';
++---------------------------------------------------------------------------------------------------------+
+| Grants for testuser@localhost                                                                           |
++---------------------------------------------------------------------------------------------------------+
+| GRANT USAGE ON *.* TO `testuser`@`localhost`                                                            |
+| GRANT SELECT, INSERT, UPDATE, CREATE ON `Music`.`Countries` TO `testuser`@`localhost` WITH GRANT OPTION |
++---------------------------------------------------------------------------------------------------------+
+2 rows in set (0,00 sec)
+
+```
+8.5 Let's just `FLUSH PRIVELEGES;` as a common practice command
+
+8.6 Login with `testuser`
