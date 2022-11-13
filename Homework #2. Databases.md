@@ -214,7 +214,7 @@ mysql> SHOW GRANTS FOR 'testuser'@'localhost';
 8.5 Let's just `FLUSH PRIVELEGES;` as a common practice command
 
 8.6 Login with `testuser` and execute `SELECT current_user();`
-```
+```bash
 pavlo@pavlo-Z490-UD:~$ mysql -u testuser -p
 Enter password: 
 Welcome to the MySQL monitor.  Commands end with ; or \g.
