@@ -10,8 +10,8 @@
 8. [Create a database of new users with different privileges. Connect to the database as a new user and verify that the privileges allow or deny certain actions.](https://github.com/ilovekharkov/EPAM/blob/master/Homework%20%232.%20Databases.md#8-create-a-database-of-new-users-with-different-privileges-connect-to-the-database-as-a-new-user-and-verify-that-the-privileges-allow-or-deny-certain-actions) 
 9. [Make a selection from the main table DB MySQL](https://github.com/ilovekharkov/EPAM/blob/master/Homework%20%232.%20Databases.md#9-make-a-selection-from-the-main-table-db-mysql) 
 
-#### [Part 2](https://github.com/ilovekharkov/EPAM/blob/master/Homework%20%232.%20Databases.md#part-1)
-1. 
+#### [Part 2](https://github.com/ilovekharkov/EPAM/blob/master/Homework%20%232.%20Databases.md#part-2-1)
+10. [Make backup of your database](https://github.com/ilovekharkov/EPAM/blob/master/Homework%20%232.%20Databases.md#10-make-backup-of-your-database)  
 
 
 ## Part 1
