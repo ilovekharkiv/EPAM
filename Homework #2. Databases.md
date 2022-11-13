@@ -6,7 +6,7 @@
 4. [Create a database on the server through the console](https://github.com/ilovekharkov/EPAM/blob/master/Homework%20%232.%20Databases.md#4-create-a-database-on-the-server-through-the-console) 
 5. [Fill in tables](https://github.com/ilovekharkov/EPAM/blob/master/Homework%20%232.%20Databases.md#5-fill-in-tables) 
 6. [Construct and execute SELECT operator with WHERE, GROUP BY and ORDER BY](https://github.com/ilovekharkov/EPAM/blob/master/Homework%20%232.%20Databases.md#6-construct-and-execute-select-operator-with-where-group-by-and-order-by) 
-7. [Execute other different SQL queries DDL, DML, DCL.](https://github.com/ilovekharkov/EPAM/blob/master/Homework%20%232.%20Databases.md#6-construct-and-execute-select-operator-with-where-group-by-and-order-by) 
+7. [Execute other different SQL queries DDL, DML, DCL.](https://github.com/ilovekharkov/EPAM/blob/master/Homework%20%232.%20Databases.md#7-execute-other-different-sql-queries-ddl-dml-dcl) 
 8. [Create a database of new users with different privileges. Connect to the database as a new user and verify that the privileges allow or deny certain actions.](https://github.com/ilovekharkov/EPAM/blob/master/Homework%20%232.%20Databases.md#8-create-a-database-of-new-users-with-different-privileges-connect-to-the-database-as-a-new-user-and-verify-that-the-privileges-allow-or-deny-certain-actions) 
 
 
