@@ -11,8 +11,13 @@
 9. [Make a selection from the main table DB MySQL](https://github.com/ilovekharkov/EPAM/blob/master/Homework%20%232.%20Databases.md#9-make-a-selection-from-the-main-table-db-mysql) 
 
 #### [Part 2](https://github.com/ilovekharkov/EPAM/blob/master/Homework%20%232.%20Databases.md#part-2-1)
-10. [Make backup of your database](https://github.com/ilovekharkov/EPAM/blob/master/Homework%20%232.%20Databases.md#10-make-backup-of-your-database)  
-
+10. [Make backup of your database](https://github.com/ilovekharkov/EPAM/blob/master/Homework%20%232.%20Databases.md#10-make-backup-of-your-database) 
+11. [Delete the table and/or part of the data in the table.]()
+12. [Restore your database.]() 
+13. [Restore your database.]() 
+14. [Restore your database.]() 
+15. [Restore your database.]() 
+16. [Restore your database.]() 
 
 ## Part 1
 ### 1. Download MySQL server for your OS on VM
@@ -279,6 +284,151 @@ mysql> SELECT Host,Db,User,Select_priv FROM db;
 
 ### 10. Make backup of your database 
  
-Let's make a backup of my `Music` database using `mysqldump` command. The results will be shown on the screen below.
+Let's make a backup of my `Music` database using `mysqldump` command. The results will be shown on the screen below. 
 
-![This is a alt text.](/Screenshots/013.png ",mysqldump")
+`mysqldump -u root -p Music > ~/Desktop/EPAM/L1/Homework\ #2.\ Databases/Music.sql`
+
+![This is a alt text.](/Screenshots/013.png "mysqldump")
+
+Database dump has been created sucessfully.
+
+### 11. Delete the table and/or part of the data in the table.
+
+Let's delete `artists` table in my `Music` database. The command and the output attached below.
+
+```bash
+mysql> SHOW TABLES;
++-----------------+
+| Tables_in_Music |
++-----------------+
+| artists         |
+| countries       |
+| labels          |
++-----------------+
+3 rows in set (0,00 sec)
+
+mysql> DROP TABLE artists;
+Query OK, 0 rows affected (0,01 sec)
+
+mysql> SHOW TABLES;
++-----------------+
+| Tables_in_Music |
++-----------------+
+| countries       |
+| labels          |
++-----------------+
+2 rows in set (0,00 sec)
+
+```
+### 12. Restore your database.
+
+12.1 Login to MySQL from `Music.sql` dump is located and `SHOW TABLES;` to make sure our `artists` table is deleted.
+
+```bash
+pavlo@pavlo-Z490-UD:~/Desktop/EPAM/L1/Homework #2. Databases$ mysql -u root -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 17
+Server version: 8.0.31-0ubuntu0.22.04.1 (Ubuntu)
+
+Copyright (c) 2000, 2022, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> USE Music;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> SHOW TABLES;
++-----------------+
+| Tables_in_Music |
++-----------------+
+| countries       |
+| labels          |
++-----------------+
+2 rows in set (0,00 sec)
+```
+12.2 Let's use `source Music.sql` to restore our table from the backup.
+```bash
+mysql> source Music.sql;
+
+Query OK, 0 rows affected (0,00 sec)
+
+Query OK, 0 rows affected (0,02 sec)
+
+Query OK, 0 rows affected (0,00 sec)
+
+Query OK, 0 rows affected (0,00 sec)
+
+Query OK, 0 rows affected (0,00 sec)
+
+Query OK, 5 rows affected (0,00 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0,00 sec)
+
+Query OK, 0 rows affected (0,02 sec)
+
+Query OK, 0 rows affected (0,00 sec)
+
+Query OK, 0 rows affected (0,00 sec)
+
+Query OK, 0 rows affected (0,00 sec)
+
+Query OK, 5 rows affected (0,00 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+
+Query OK, 0 rows affected (0,01 sec)
+
+Query OK, 0 rows affected (0,00 sec)
+
+Query OK, 0 rows affected (0,00 sec)
+
+Query OK, 0 rows affected (0,00 sec)
+
+Query OK, 5 rows affected (0,00 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0,00 sec)
+
+Query OK, 0 rows affected (0,00 sec)
+
+Query OK, 0 rows affected (0,00 sec)
+
+Query OK, 0 rows affected (0,00 sec)
+
+Query OK, 0 rows affected (0,00 sec)
+```
+
+12.3 Let's use `SHOW TABLES;` to make sure all the tables are in place.
+```bash
+mysql> SHOW TABLES;
++-----------------+
+| Tables_in_Music |
++-----------------+
+| artists         |
+| countries       |
+| labels          |
++-----------------+
+3 rows in set (0,00 sec)
+```
+12.4 Let's use `SELECT` to make sure all the data is in place.
+```bash
+mysql> SELECT * FROM artists;
++-----------+------------+-----------------+----------+-----+--------+
+| artist_id | first_name | last_name       | label_id | age | salary |
++-----------+------------+-----------------+----------+-----+--------+
+|       101 | Armin      | Van Buuren      |        1 |  42 |  45.45 |
+|       201 | Martin     | Garrix          |        3 |  22 |  55.45 |
+|       301 | Marika     | Rossa           |        2 |  37 |  65.45 |
+|       401 | Tijs       | Michiel Verwest |        5 |  47 |  45.45 |
+|       501 | David      | Guetta          |        4 |  32 |  42.57 |
++-----------+------------+-----------------+----------+-----+--------+
+5 rows in set (0,00 sec)
+```
