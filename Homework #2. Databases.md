@@ -197,7 +197,7 @@ mysql> SELECT artists.artist_id, artists.first_name, artists.last_name, countrie
 ![This is a alt text.](/Screenshots/012.png "testuser")
 
 8.3 We need to give him access rights 
-`GRANT CREATE, INSERT, UPDATE, SELECT on Music.Countries TO 'testuser'@'localhost' WITH GRANT OPTION;`
+`GRANT CREATE, INSERT, UPDATE, SELECT on Music.countries TO 'testuser'@'localhost' WITH GRANT OPTION;`
 
 8.4 Make sure `PRIVELEGES` set up
 ```bash
@@ -206,11 +206,56 @@ mysql> SHOW GRANTS FOR 'testuser'@'localhost';
 | Grants for testuser@localhost                                                                           |
 +---------------------------------------------------------------------------------------------------------+
 | GRANT USAGE ON *.* TO `testuser`@`localhost`                                                            |
-| GRANT SELECT, INSERT, UPDATE, CREATE ON `Music`.`Countries` TO `testuser`@`localhost` WITH GRANT OPTION |
+| GRANT SELECT, INSERT, UPDATE, CREATE ON `Music`.`countries` TO `testuser`@`localhost` WITH GRANT OPTION |
 +---------------------------------------------------------------------------------------------------------+
 2 rows in set (0,00 sec)
 
 ```
 8.5 Let's just `FLUSH PRIVELEGES;` as a common practice command
 
-8.6 Login with `testuser`
+8.6 Login with `testuser` and execute `SELECT current_user();`
+```
+pavlo@pavlo-Z490-UD:~$ mysql -u testuser -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 115
+Server version: 8.0.31-0ubuntu0.22.04.1 (Ubuntu)
+
+Copyright (c) 2000, 2022, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> SELECT current_user();
++--------------------+
+| current_user()     |
++--------------------+
+| testuser@localhost |
++--------------------+
+1 row in set (0,00 sec)
+```
+
+8.7 Use `Music` database and try to `SELECT` from the table `artists` which `testuser` doesn't have access to and make sure priveleges work as expected
+```bash
+mysql> use Music;
+Database changed
+mysql> SELECT artist_id FROM artists;
+ERROR 1142 (42000): SELECT command denied to user 'testuser'@'localhost' for table 'artists'
+```
+8.7 Use `Music` database and try to `SELECT` from the table `countries` which `testuser` HAS access to and make sure priveleges work as expected
+```bash
+mysql> SELECT * FROM countries;
++------------+--------------+-----------+------------+
+| country_id | country_name | language  | population |
++------------+--------------+-----------+------------+
+|          3 | UA           | Ukrainian | 150m       |
+|          5 | UK           | English   | 50m        |
+|          7 | US           | English   | 250m       |
+|          9 | PL           | Polski    | 35m        |
+|         11 | UK           | English   | 10m        |
++------------+--------------+-----------+------------+
+5 rows in set (0,00 sec)
+```
