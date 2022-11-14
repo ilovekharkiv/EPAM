@@ -439,7 +439,69 @@ mysql> SELECT * FROM artists;
 +-----------+------------+-----------------+----------+-----+--------+
 5 rows in set (0,00 sec)
 ```
-### 13. Transfer your local database to RDS AWS or Azure
+### 13. Connect to your database and transfer your local database to RDS AWS
+
+13.1 Let's create a database instance in AWS via AWS console and waiting for its creation.
+![This is a alt text.](/Screenshots/aws1.png "aws")
+![This is a alt text.](/Screenshots/aws2.png "aws")
+![This is a alt text.](/Screenshots/aws3.png "aws")
+![This is a alt text.](/Screenshots/aws4.png "aws")
+![This is a alt text.](/Screenshots/aws5.png "aws")
+![This is a alt text.](/Screenshots/aws6.png "aws")
+![This is a alt text.](/Screenshots/aws7.png "aws")
+![This is a alt text.](/Screenshots/aws8.png "aws")
+![This is a alt text.](/Screenshots/aws9.png "aws")
+
+13.2 I already have a security group called `mysql`. I have 2 inbound rules to make sure that `port 3306` and `port 22` are opened for connections.
+![This is a alt text.](/Screenshots/aws10.png "aws")
+
+13.3 Let's connect to the database via `MySQL Workbench` using connection endpoint from AWS Console `epam-hometask.crbhgjidnxqd.eu-central-1.rds.amazonaws.com`.
+![This is a alt text.](/Screenshots/aws11.png "aws")
+![This is a alt text.](/Screenshots/aws12.png "aws")
+
+13.4 Let's transfer our database from `localhost` to `RDS instance` using `Migation Wizard`
+![This is a alt text.](/Screenshots/msql1.png "msql")
+![This is a alt text.](/Screenshots/msql2.png "msql")
+![This is a alt text.](/Screenshots/msql3.png "msql")
+![This is a alt text.](/Screenshots/msql4.png "msql")
+![This is a alt text.](/Screenshots/msql5.png "msql")
+![This is a alt text.](/Screenshots/msql6.png "msql")
+![This is a alt text.](/Screenshots/msql7.png "msql")
+![This is a alt text.](/Screenshots/msql8.png "msql")
+![This is a alt text.](/Screenshots/msql9.png "msql")
+![This is a alt text.](/Screenshots/msql10.png "msql")
+![This is a alt text.](/Screenshots/msql11.png "msql")
+![This is a alt text.](/Screenshots/msql12.png "msql")
+![This is a alt text.](/Screenshots/msql13.png "msql")
+![This is a alt text.](/Screenshots/msql14.png "msql")
+![This is a alt text.](/Screenshots/msql15.png "msql")
+![This is a alt text.](/Screenshots/msql16.png "msql")
+
+### 14. Connect to your database via shell and make sure the data exists
+>I'm going to connect to RDS instance using shell, i am pretty sure that it works as expected, since i already connected to the instance using MySQL Workbench.
+![This is a alt text.](/Screenshots/shell1.png "shell1")
+
+
+### 15. Execute SELECT operator similar step 6.
+![This is a alt text.](/Screenshots/shell2.png "shell1")
+![This is a alt text.](/Screenshots/shell3.png "shell1")
+![This is a alt text.](/Screenshots/shell4.png "shell1")
+
+### 16. Create the dump of your database.
+
+16.1 Let's add a couple of rows to our RDS DB `Music`, so that our local database will be slightly different
+![This is a alt text.](/Screenshots/shell5.png "shell1")
+
+16.2 Let's make a backup of our RDS DB `Music` and store it on local machine
+![This is a alt text.](/Screenshots/back1.png "back")
+![This is a alt text.](/Screenshots/back2.png "back")
+![This is a alt text.](/Screenshots/back3.png "back")
+
+16.3 Let's import it to our local database and make sure that data is in place
+![This is a alt text.](/Screenshots/imp1.png "imp")
+![This is a alt text.](/Screenshots/imp2.png "imp")
+![This is a alt text.](/Screenshots/imp3.png "imp")
+![This is a alt text.](/Screenshots/imp4.png "imp")
 
 
 ## Part 3
@@ -474,7 +536,7 @@ artists
 ```
 
 ### 19. Create some documents. Insert a couple of documents into your collection. I'll leave the subject matter up to you, perhaps cars or hats
->I am a guge fan od EDM music in the past (and still is) so that it's just collection of artists
+>I was a huge fan of EDM music in the past so that it's just collection of artists
 ```bash
 Music> db.artists.insertMany(
 ... 	[
