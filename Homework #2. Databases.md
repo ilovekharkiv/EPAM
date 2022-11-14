@@ -560,7 +560,7 @@ Music> db.artists.find({ Music: 'Techno' } )
 ]
 ```
 
-20.2 Let's try to find someone whos age `>40` 
+20.2 Let's try to find someone whos age is `>40` 
 ```bash
 Music> db.artists.find({Age: { $gt: '40' } } ) 
 [
