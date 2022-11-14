@@ -19,6 +19,13 @@
 15. [Execute SELECT operator similar step 6]() 
 16. [Create the dump of your database]() 
 
+#### [Part 3](https://github.com/ilovekharkov/EPAM/blob/master/Homework%20%232.%20Databases.md#part-3)
+17. [Create a database. Use the use command to connect to a new database (If it doesn't exist, Mongo will create it when you write to it)](https://github.com/ilovekharkov/EPAM/blob/master/Homework%20%232.%20Databases.md#17-create-a-database-use-the-use-command-to-connect-to-a-new-database-if-it-doesnt-exist-mongo-will-create-it-when-you-write-to-it)
+18. [Create a collection. Use db.createCollection to create a collection. I'll leave the subject up to you. Run show dbs and show collections to view your database and collections](https://github.com/ilovekharkov/EPAM/blob/master/Homework%20%232.%20Databases.md#18-create-a-collection-use-dbcreatecollection-to-create-a-collection-ill-leave-the-subject-up-to-you-run-show-dbs-and-show-collections-to-view-your-database-and-collections)
+19. [Create some documents. Insert a couple of documents into your collection. I'll leave the subject matter up to you, perhaps cars or hats](https://github.com/ilovekharkov/EPAM/blob/master/Homework%20%232.%20Databases.md#19-create-some-documents-insert-a-couple-of-documents-into-your-collection-ill-leave-the-subject-matter-up-to-you-perhaps-cars-or-hats)
+20. [Use find() to list documents out](https://github.com/ilovekharkov/EPAM/blob/master/Homework%20%232.%20Databases.md#20-use-find-to-list-documents-out)
+
+
 ## Part 1
 ### 1. Download MySQL server for your OS on VM
 ### 2. Install MySQL server on VM 
@@ -432,11 +439,11 @@ mysql> SELECT * FROM artists;
 +-----------+------------+-----------------+----------+-----+--------+
 5 rows in set (0,00 sec)
 ```
-### 13. Transfer your local database to RDS AWS or Azure.
+### 13. Transfer your local database to RDS AWS or Azure
 
 
 ## Part 3
-### 17. Create a database. Use the use command to connect to a new database (If it doesn't exist, Mongo will create it when you write to it).
+### 17. Create a database. Use the use command to connect to a new database (If it doesn't exist, Mongo will create it when you write to it)
 17.1 I have MongoDB installed in docker, since i have Ubuntu 22.04 and it doesn't work properly without container. Let's check if container exists.
 ![This is a alt text.](/Screenshots/014.png "docker")
 
@@ -446,7 +453,7 @@ mysql> SELECT * FROM artists;
 17.2 Let's dive into container and open MongoDB Shell
 ![This is a alt text.](/Screenshots/016.png "mongosh")
 
-### 18. Create a collection. Use db.createCollection to create a collection. I'll leave the subject up to you. Run show dbs and show collections to view your database and collections.
+### 18. Create a collection. Use db.createCollection to create a collection. I'll leave the subject up to you. Run show dbs and show collections to view your database and collections
 
 Let's create a collection 
 ```bash
@@ -526,7 +533,7 @@ Music> db.artists.insertMany(
 
 ```
 
-### 20. Use find() to list documents out.
+### 20. Use find() to list documents out
 
 20.1 Let's try to find someone who plays `Techno` music
 ```bash
