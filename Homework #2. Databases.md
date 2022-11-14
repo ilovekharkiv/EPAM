@@ -14,7 +14,7 @@
 10. [Make backup of your database](https://github.com/ilovekharkiv/EPAM/blob/master/Homework%20%232.%20Databases.md#10-make-backup-of-your-database) 
 11. [Delete the table and/or part of the data in the table.](https://github.com/ilovekharkiv/EPAM/blob/master/Homework%20%232.%20Databases.md#11-delete-the-table-andor-part-of-the-data-in-the-table)
 12. [Restore your database.](https://github.com/ilovekharkiv/EPAM/blob/master/Homework%20%232.%20Databases.md#12-restore-your-database) 
-13. [Connect to your database and transfer your local database to RDS AWS](https://github.com/ilovekharkiv/EPAM/blob/master/Homework%20%232.%20Databases.md#13-connect-to-your-database-and-transfer-your-local-database-to-rds-aws) 
+13. [Transfer your local database to RDS AWS](https://github.com/ilovekharkiv/EPAM/blob/master/Homework%20%232.%20Databases.md#13-connect-to-your-database-and-transfer-your-local-database-to-rds-aws) 
 14. [Connect to your database via shell and make sure the data exists](https://github.com/ilovekharkiv/EPAM/blob/master/Homework%20%232.%20Databases.md#14-connect-to-your-database-via-shell-and-make-sure-the-data-exists) 
 15. [Execute SELECT operator similar step 6](https://github.com/ilovekharkiv/EPAM/blob/master/Homework%20%232.%20Databases.md#15-execute-select-operator-similar-step-6) 
 16. [Create the dump of your database](https://github.com/ilovekharkiv/EPAM/blob/master/Homework%20%232.%20Databases.md#16-create-the-dump-of-your-database) 
