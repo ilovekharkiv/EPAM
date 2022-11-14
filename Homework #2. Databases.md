@@ -15,9 +15,9 @@
 11. [Delete the table and/or part of the data in the table.](https://github.com/ilovekharkov/EPAM/blob/master/Homework%20%232.%20Databases.md#11-delete-the-table-andor-part-of-the-data-in-the-table)
 12. [Restore your database.](https://github.com/ilovekharkov/EPAM/blob/master/Homework%20%232.%20Databases.md#12-restore-your-database) 
 13. [Transfer your local database to RDS AWS.]() 
-14. [Restore your database.]() 
-15. [Restore your database.]() 
-16. [Restore your database.]() 
+14. [Connect to your database]() 
+15. [Execute SELECT operator similar step 6]() 
+16. [Create the dump of your database]() 
 
 ## Part 1
 ### 1. Download MySQL server for your OS on VM
@@ -432,5 +432,192 @@ mysql> SELECT * FROM artists;
 +-----------+------------+-----------------+----------+-----+--------+
 5 rows in set (0,00 sec)
 ```
+### 13. Transfer your local database to RDS AWS or Azure.
 
-![This is a alt text.](/Screenshots/014.png "artists")
+
+## Part 3
+### 17. Create a database. Use the use command to connect to a new database (If it doesn't exist, Mongo will create it when you write to it).
+17.1 I have MongoDB installed in docker, since i have Ubuntu 22.04 and it doesn't work properly without container. Let's check if container exists.
+![This is a alt text.](/Screenshots/014.png "docker")
+
+17.2 Let's launch MongoDB in Docker with volume.
+![This is a alt text.](/Screenshots/015.png "volume")
+
+17.2 Let's dive into container and open MongoDB Shell
+![This is a alt text.](/Screenshots/016.png "mongosh")
+
+### 18. Create a collection. Use db.createCollection to create a collection. I'll leave the subject up to you. Run show dbs and show collections to view your database and collections.
+
+Let's create a collection 
+```bash
+test> use Music
+switched to db Music
+Music> db.createCollection( "artists",
+...    {
+...      capped: true,
+...      autoIndexId: true,
+...      size: 10000,
+...      max: 50
+...    }
+... )
+{ ok: 1 }
+Music> show collections
+artists
+
+```
+
+### 19. Create some documents. Insert a couple of documents into your collection. I'll leave the subject matter up to you, perhaps cars or hats
+>I am a guge fan od EDM music in the past (and still is) so that it's just collection of artists
+```bash
+Music> db.artists.insertMany(
+... 	[
+... 		{
+... 			First_Name: "Armin",
+... 			Last_Name: "Van Buuren",
+... 			Date_Of_Birth: "1960-09-26",
+... 			Country: "Netherlands",
+... 			Music: "Trance",
+... 			Age: "43"
+... 					},
+... 		{
+... 			First_Name: "David",
+... 			Last_Name: "Guetta",
+... 			Date_Of_Birth: "1990-03-03",
+... 			Country: "Netherlands",
+... 			Music: "Pop",
+... 			Age: "41"
+... 		},
+... 		{
+... 			First_Name: "Martin",
+... 			Last_Name: "Garrix",
+... 			Date_Of_Birth: "1980-02-02",
+... 			Country: "Netherlands",
+... 			Music: "Techno",
+... 			Age: "23"
+... 		},
+... 		{
+... 			First_Name: "Steve",
+... 			Last_Name: "Aoki",
+... 			Date_Of_Birth: "1970-01-01",
+... 			Country: "USA",
+... 			Music: "EDM",
+... 			Age: "44"
+... 		},
+... 		{
+... 			First_Name: "Joel",
+... 			Last_Name: "Zimmerman",
+... 			Date_Of_Birth: "1950-04-04",
+... 			Country: "Canada",
+... 			Music: "Techno",
+... 			Age: "65"
+... 		}
+... 	]
+... );
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("637250496e377a3a04c39399"),
+    '1': ObjectId("637250496e377a3a04c3939a"),
+    '2': ObjectId("637250496e377a3a04c3939b"),
+    '3': ObjectId("637250496e377a3a04c3939c"),
+    '4': ObjectId("637250496e377a3a04c3939d")
+  }
+}
+
+```
+
+### 20. Use find() to list documents out.
+
+20.1 Let's try to find someone who plays `Techno` music
+```bash
+Music> db.artists.find({ Music: 'Techno' } ) 
+[
+  {
+    _id: ObjectId("637250496e377a3a04c3939b"),
+    First_Name: 'Martin',
+    Last_Name: 'Garrix',
+    Date_Of_Birth: '1980-02-02',
+    Country: 'Netherlands',
+    Music: 'Techno',
+    Age: '23'
+  },
+  {
+    _id: ObjectId("637250496e377a3a04c3939d"),
+    First_Name: 'Joel',
+    Last_Name: 'Zimmerman',
+    Date_Of_Birth: '1950-04-04',
+    Country: 'Canada',
+    Music: 'Techno',
+    Age: '65'
+  }
+]
+```
+
+20.2 Let's try to find someone whos age `>40` 
+```bash
+Music> db.artists.find({Age: { $gt: '40' } } ) 
+[
+  {
+    _id: ObjectId("637250496e377a3a04c39399"),
+    First_Name: 'Armin',
+    Last_Name: 'Van Buuren',
+    Date_Of_Birth: '1960-09-26',
+    Country: 'Netherlands',
+    Music: 'Trance',
+    Age: '43'
+  },
+  {
+    _id: ObjectId("637250496e377a3a04c3939a"),
+    First_Name: 'David',
+    Last_Name: 'Guetta',
+    Date_Of_Birth: '1990-03-03',
+    Country: 'Netherlands',
+    Music: 'Pop',
+    Age: '41'
+  },
+  {
+    _id: ObjectId("637250496e377a3a04c3939c"),
+    First_Name: 'Steve',
+    Last_Name: 'Aoki',
+    Date_Of_Birth: '1970-01-01',
+    Country: 'USA',
+    Music: 'EDM',
+    Age: '44'
+  },
+  {
+    _id: ObjectId("637250496e377a3a04c3939d"),
+    First_Name: 'Joel',
+    Last_Name: 'Zimmerman',
+    Date_Of_Birth: '1950-04-04',
+    Country: 'Canada',
+    Music: 'Techno',
+    Age: '65'
+  }
+]
+```
+
+20.3 Let's find someone who has `r` in hiw 'First_Name'
+```bash
+Music> db.artists.find({First_Name: {$regex: /r/ }}) 
+[
+  {
+    _id: ObjectId("637250496e377a3a04c39399"),
+    First_Name: 'Armin',
+    Last_Name: 'Van Buuren',
+    Date_Of_Birth: '1960-09-26',
+    Country: 'Netherlands',
+    Music: 'Trance',
+    Age: '43'
+  },
+  {
+    _id: ObjectId("637250496e377a3a04c3939b"),
+    First_Name: 'Martin',
+    Last_Name: 'Garrix',
+    Date_Of_Birth: '1980-02-02',
+    Country: 'Netherlands',
+    Music: 'Techno',
+    Age: '23'
+  }
+]
+
+```
