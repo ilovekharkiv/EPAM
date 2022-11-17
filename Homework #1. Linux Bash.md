@@ -1,7 +1,12 @@
 
 
-## [Part 2](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%231.%20Linux%20Bash.md#part-2)
-### Please find the script and its output further below.
+## [Part B. Using Apache log example create a script to answer the following questions](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%231.%20Linux%20Bash.md#part-2) 
+# 1. From which ip were the most requests?
+# 2. What is the most requested page?
+# 3. How many requests were there from each ip?
+# 4. What non-existent pages were clients referred to?
+# 5. What time did site get the most requests?
+# 6. What search bots have accessed the site? (UA + IP
 
 
 ```bash
@@ -9,7 +14,7 @@
 
 file=$1
 
-## 1. Which ip were the most requests from?
+#1. Which ip were the most requests from?
 
 most_requests_ip () {
 echo Which ip were the most requests from?
@@ -17,7 +22,7 @@ awk '{print $1}' $file | sort | uniq -c | sort -nr | head -1
 }
 most_requests_ip
 
-## 2. What is the most requested page?
+#2. What is the most requested page?
 
 most_requests_url () {
 echo What is the most requested page?
@@ -25,7 +30,7 @@ awk '{print $11}' $file | sort | uniq -c | sort -nr | grep http | head -1
 }
 most_requests_url
 
-### 3. How many requests were there from each ip?
+#3. How many requests were there from each ip?
 
 most_requests_from_ip () {
 echo How many requests were there from each ip?
@@ -34,7 +39,7 @@ echo
 }
 most_requests_from_ip
 
-## 4. What non-existent pages were clients referred to?
+#4. What non-existent pages were clients referred to?
 
 non_existent () {
 echo What non-existent pages were clients referred to?
@@ -42,7 +47,7 @@ awk '{ if($9 == 404) {print $11} }' $file | sort | uniq | sort -nr
 }
 non_existent
 
-## 5. What time did site get the most requests?
+#5. What time did site get the most requests?
 
 most_requests_time () {
 echo What time did site get the most requests?
@@ -50,7 +55,7 @@ awk '{print $4,$5}' $file | sort | uniq -c | sort -nr | head -1
 }
 most_requests_time
 
-## 6. What search bots have accessed the site? (UA + IP)
+#6. What search bots have accessed the site? (UA + IP)
 
 search_bots () {
 echo What search bots have accessed the site? UA + IP
