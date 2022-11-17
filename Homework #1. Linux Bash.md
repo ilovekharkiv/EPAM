@@ -1,12 +1,12 @@
 
 
 ## [Part B. Using Apache log example create a script to answer the following questions](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%231.%20Linux%20Bash.md#part-2) 
-#### 1. From which ip were the most requests?
-#### 2. What is the most requested page?
-#### 3. How many requests were there from each ip?
-#### 4. What non-existent pages were clients referred to?
-#### 5. What time did site get the most requests?
-#### 6. What search bots have accessed the site? (UA + IP
+1. From which ip were the most requests?
+2. What is the most requested page?
+3. How many requests were there from each ip?
+4. What non-existent pages were clients referred to?
+5. What time did site get the most requests?
+6. What search bots have accessed the site? (UA + IP
 
 
 ```bash
