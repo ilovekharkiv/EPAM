@@ -32,6 +32,7 @@ echo
 most_requests_from_ip
 
 ## 4. What non-existent pages were clients referred to?
+
 non_existent () {
 echo What non-existent pages were clients referred to?
 awk '{ if($9 == 404) {print $11} }' $file | sort | uniq | sort -nr
@@ -128,7 +129,7 @@ What non-existent pages were clients referred to?
 "-"
 What time did site get the most requests?
    4 [25/Apr/2017:11:40:56 +0400]
-What search bots have accessed the site? UA + IP
+What search bots have accessed the site? UA + IP ## I didn't find a single ua bot, so that i kept this one as it is.
 217.182.132.183 AhrefsBot/5.2; +http://ahrefs.com/robot/)"
 207.46.13.3 bingbot/2.0; +http://www.bing.com/bingbot.htm)"
 207.46.13.128 bingbot/2.0; +http://www.bing.com/bingbot.htm)"
