@@ -3,6 +3,7 @@
 ## [Part 2](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%231.%20Linux%20Bash.md#part-2)
 ### Please find the script and its output further below.
 
+
 ```bash
 #!/bin/bash
 
