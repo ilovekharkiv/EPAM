@@ -3,7 +3,6 @@
 ## Part 2
 ### Please find the script and its output further below.
 
-
 ```bash
 #!/bin/bash
 
@@ -58,6 +57,7 @@ cut -f 1,14,15 -d ' ' $file | grep bot | sort -nr | uniq
 }
 search_bots
 ```
+>Quick note related to #6. I didn't find a single UA-bot in the log file, so that i kept it as it is.
 ```bash
 Which ip were the most requests from?
   29 94.78.95.154
@@ -133,7 +133,6 @@ What non-existent pages were clients referred to?
 What time did site get the most requests?
    4 [25/Apr/2017:11:40:56 +0400]
 What search bots have accessed the site? UA + IP 
->I didn't find a single ua bot, so that i kept this one as it is.
 217.182.132.183 AhrefsBot/5.2; +http://ahrefs.com/robot/)"
 207.46.13.3 bingbot/2.0; +http://www.bing.com/bingbot.htm)"
 207.46.13.128 bingbot/2.0; +http://www.bing.com/bingbot.htm)"
