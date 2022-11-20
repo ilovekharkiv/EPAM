@@ -1,29 +1,29 @@
 # Table of Contents
 #### [Part 1](https://github.com/ilovekharkiv/EPAM/blob/master/Homework%20%232.%20Databases.md#part-1)
-1. [Download MySQL server for your OS on VM](https://github.com/ilovekharkiv/EPAM/blob/master/Homework%20%232.%20Databases.md#part-1)
-2. [Install MySQL server on VM](https://github.com/ilovekharkiv/EPAM/blob/master/Homework%20%232.%20Databases.md#2-install-mysql-server-on-vm) 
-3. [Select a subject area and describe the database schema](https://github.com/ilovekharkiv/EPAM/blob/master/Homework%20%232.%20Databases.md#3-select-a-subject-area-and-describe-the-database-schema) 
-4. [Create a database on the server through the console](https://github.com/ilovekharkiv/EPAM/blob/master/Homework%20%232.%20Databases.md#4-create-a-database-on-the-server-through-the-console) 
-5. [Fill in tables](https://github.com/ilovekharkiv/EPAM/blob/master/Homework%20%232.%20Databases.md#5-fill-in-tables) 
-6. [Construct and execute SELECT operator with WHERE, GROUP BY and ORDER BY](https://github.com/ilovekharkiv/EPAM/blob/master/Homework%20%232.%20Databases.md#6-construct-and-execute-select-operator-with-where-group-by-and-order-by) 
-7. [Execute other different SQL queries DDL, DML, DCL.](https://github.com/ilovekharkiv/EPAM/blob/master/Homework%20%232.%20Databases.md#7-execute-other-different-sql-queries-ddl-dml-dcl) 
-8. [Create a database of new users with different privileges. Connect to the database as a new user and verify that the privileges allow or deny certain actions.](https://github.com/ilovekharkiv/EPAM/blob/master/Homework%20%232.%20Databases.md#8-create-a-database-of-new-users-with-different-privileges-connect-to-the-database-as-a-new-user-and-verify-that-the-privileges-allow-or-deny-certain-actions) 
-9. [Make a selection from the main table DB MySQL](https://github.com/ilovekharkiv/EPAM/blob/master/Homework%20%232.%20Databases.md#9-make-a-selection-from-the-main-table-db-mysql) 
+1. [Download MySQL server for your OS on VM](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%232.%20Databases.md#part-1)
+2. [Install MySQL server on VM](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%232.%20Databases.md#2-install-mysql-server-on-vm) 
+3. [Select a subject area and describe the database schema](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%232.%20Databases.md#3-select-a-subject-area-and-describe-the-database-schema) 
+4. [Create a database on the server through the console](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%232.%20Databases.md#4-create-a-database-on-the-server-through-the-console) 
+5. [Fill in tables](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%232.%20Databases.md#5-fill-in-tables) 
+6. [Construct and execute SELECT operator with WHERE, GROUP BY and ORDER BY](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%232.%20Databases.md#6-construct-and-execute-select-operator-with-where-group-by-and-order-by) 
+7. [Execute other different SQL queries DDL, DML, DCL.](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%232.%20Databases.md#7-execute-other-different-sql-queries-ddl-dml-dcl) 
+8. [Create a database of new users with different privileges. Connect to the database as a new user and verify that the privileges allow or deny certain actions.](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%232.%20Databases.md#8-create-a-database-of-new-users-with-different-privileges-connect-to-the-database-as-a-new-user-and-verify-that-the-privileges-allow-or-deny-certain-actions) 
+9. [Make a selection from the main table DB MySQL](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%232.%20Databases.md#9-make-a-selection-from-the-main-table-db-mysql) 
 
-#### [Part 2](https://github.com/ilovekharkiv/EPAM/blob/master/Homework%20%232.%20Databases.md#part-2-1)
-10. [Make backup of your database](https://github.com/ilovekharkiv/EPAM/blob/master/Homework%20%232.%20Databases.md#10-make-backup-of-your-database) 
-11. [Delete the table and/or part of the data in the table.](https://github.com/ilovekharkiv/EPAM/blob/master/Homework%20%232.%20Databases.md#11-delete-the-table-andor-part-of-the-data-in-the-table)
-12. [Restore your database.](https://github.com/ilovekharkiv/EPAM/blob/master/Homework%20%232.%20Databases.md#12-restore-your-database) 
-13. [Transfer your local database to RDS AWS](https://github.com/ilovekharkiv/EPAM/blob/master/Homework%20%232.%20Databases.md#13-connect-to-your-database-and-transfer-your-local-database-to-rds-aws) 
-14. [Connect to your database via shell and make sure the data exists](https://github.com/ilovekharkiv/EPAM/blob/master/Homework%20%232.%20Databases.md#14-connect-to-your-database-via-shell-and-make-sure-the-data-exists) 
-15. [Execute SELECT operator similar step 6](https://github.com/ilovekharkiv/EPAM/blob/master/Homework%20%232.%20Databases.md#15-execute-select-operator-similar-step-6) 
-16. [Create the dump of your database](https://github.com/ilovekharkiv/EPAM/blob/master/Homework%20%232.%20Databases.md#16-create-the-dump-of-your-database) 
+#### [Part 2](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%232.%20Databases.md#part-2-1)
+10. [Make backup of your database](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%232.%20Databases.md#10-make-backup-of-your-database) 
+11. [Delete the table and/or part of the data in the table.](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%232.%20Databases.md#11-delete-the-table-andor-part-of-the-data-in-the-table)
+12. [Restore your database.](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%232.%20Databases.md#12-restore-your-database) 
+13. [Transfer your local database to RDS AWS](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%232.%20Databases.md#13-connect-to-your-database-and-transfer-your-local-database-to-rds-aws) 
+14. [Connect to your database via shell and make sure the data exists](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%232.%20Databases.md#14-connect-to-your-database-via-shell-and-make-sure-the-data-exists) 
+15. [Execute SELECT operator similar step 6](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%232.%20Databases.md#15-execute-select-operator-similar-step-6) 
+16. [Create the dump of your database](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%232.%20Databases.md#16-create-the-dump-of-your-database) 
 
-#### [Part 3](https://github.com/ilovekharkiv/EPAM/blob/master/Homework%20%232.%20Databases.md#part-3)
-17. [Create a database. Use the use command to connect to a new database (If it doesn't exist, Mongo will create it when you write to it)](https://github.com/ilovekharkiv/EPAM/blob/master/Homework%20%232.%20Databases.md#17-create-a-database-use-the-use-command-to-connect-to-a-new-database-if-it-doesnt-exist-mongo-will-create-it-when-you-write-to-it)
-18. [Create a collection. Use db.createCollection to create a collection. I'll leave the subject up to you. Run show dbs and show collections to view your database and collections](https://github.com/ilovekharkiv/EPAM/blob/master/Homework%20%232.%20Databases.md#18-create-a-collection-use-dbcreatecollection-to-create-a-collection-ill-leave-the-subject-up-to-you-run-show-dbs-and-show-collections-to-view-your-database-and-collections)
-19. [Create some documents. Insert a couple of documents into your collection. I'll leave the subject matter up to you, perhaps cars or hats](https://github.com/ilovekharkiv/EPAM/blob/master/Homework%20%232.%20Databases.md#19-create-some-documents-insert-a-couple-of-documents-into-your-collection-ill-leave-the-subject-matter-up-to-you-perhaps-cars-or-hats)
-20. [Use find() to list documents out](https://github.com/ilovekharkiv/EPAM/blob/master/Homework%20%232.%20Databases.md#20-use-find-to-list-documents-out)
+#### [Part 3](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%232.%20Databases.md#part-3)
+17. [Create a database. Use the use command to connect to a new database (If it doesn't exist, Mongo will create it when you write to it)](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%232.%20Databases.md#17-create-a-database-use-the-use-command-to-connect-to-a-new-database-if-it-doesnt-exist-mongo-will-create-it-when-you-write-to-it)
+18. [Create a collection. Use db.createCollection to create a collection. I'll leave the subject up to you. Run show dbs and show collections to view your database and collections](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%232.%20Databases.md#18-create-a-collection-use-dbcreatecollection-to-create-a-collection-ill-leave-the-subject-up-to-you-run-show-dbs-and-show-collections-to-view-your-database-and-collections)
+19. [Create some documents. Insert a couple of documents into your collection. I'll leave the subject matter up to you, perhaps cars or hats](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%232.%20Databases.md#19-create-some-documents-insert-a-couple-of-documents-into-your-collection-ill-leave-the-subject-matter-up-to-you-perhaps-cars-or-hats)
+20. [Use find() to list documents out](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%232.%20Databases.md#20-use-find-to-list-documents-out)
 
 
 ## Part 1
@@ -92,7 +92,7 @@ VALUES
 ('Ukraine The Best',05,'2022-11-10'),
 ('Thx Poland releases',07,'2022-11-09'),
 ('Random one',09,'2022-11-08'),
-('Test task for Epam',011,'2022-11-07');
+('Test task for EPAM-L1',011,'2022-11-07');
 ```
 ![This is a alt text.](/Screenshots/06.png "labels")
 
@@ -174,7 +174,7 @@ mysql> SELECT artists.artist_id, artists.first_name, artists.last_name, countrie
 |       101 | Armin      | Van Buuren      | UA           | Ukrainian | Ukraine The Best    |
 |       201 | Martin     | Garrix          | USA          | English   | Thx Poland releases |
 |       301 | Marika     | Rossa           | UK           | English   | Ukraine The Best    |
-|       401 | Tijs       | Michiel Verwest | CAN          | English   | Test task for Epam  |
+|       401 | Tijs       | Michiel Verwest | CAN          | English   | Test task for EPAM-L1  |
 |       501 | David      | Guetta          | PL           | Polski    | Random one          |
 +-----------+------------+-----------------+--------------+-----------+---------------------+
 5 rows in set (0,00 sec)
@@ -293,7 +293,7 @@ mysql> SELECT Host,Db,User,Select_priv FROM db;
  
 Let's make a backup of my `Music` database using `mysqldump` command. The results will be shown on the screen below. 
 
-`mysqldump -u root -p Music > ~/Desktop/EPAM/L1/Homework\ #2.\ Databases/Music.sql`
+`mysqldump -u root -p Music > ~/Desktop/EPAM-L1/L1/Homework\ #2.\ Databases/Music.sql`
 
 ![This is a alt text.](/Screenshots/013.png "mysqldump")
 
@@ -332,7 +332,7 @@ mysql> SHOW TABLES;
 12.1 Login to MySQL from `Music.sql` dump is located and `SHOW TABLES;` to make sure our `artists` table is deleted.
 
 ```bash
-pavlo@pavlo-Z490-UD:~/Desktop/EPAM/L1/Homework #2. Databases$ mysql -u root -p
+pavlo@pavlo-Z490-UD:~/Desktop/EPAM-L1/L1/Homework #2. Databases$ mysql -u root -p
 Enter password: 
 Welcome to the MySQL monitor.  Commands end with ; or \g.
 Your MySQL connection id is 17
