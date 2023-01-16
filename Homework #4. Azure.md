@@ -1,2 +1,0 @@
-# EPAM
-Azure Task
