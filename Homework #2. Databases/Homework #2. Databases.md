@@ -329,7 +329,7 @@ mysql> SHOW TABLES;
 ```
 ### 12. Restore your database.
 
-12.1 Login to MySQL from `Music.sql` dump is located and `SHOW TABLES;` to make sure our `artists` table is deleted.
+12.1 Login to MySQL. Use `Music` DB and `SHOW TABLES;` to make sure our `artists` table is deleted.
 
 ```bash
 pavlo@pavlo-Z490-UD:~/Desktop/EPAM-L1/L1/Homework #2. Databases$ mysql -u root -p
