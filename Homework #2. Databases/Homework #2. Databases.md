@@ -360,7 +360,7 @@ mysql> SHOW TABLES;
 +-----------------+
 2 rows in set (0,00 sec)
 ```
-12.2 Let's use `source Music.sql` to restore our table from the backup.
+12.2 Let's use `source Music.sql` to restore our table from the backup
 ```bash
 mysql> source Music.sql;
 
