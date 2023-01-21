@@ -98,8 +98,10 @@ search_bots
 ```bash
 Which ip were the most requests from?
   29 94.78.95.154
+  
 What is the most requested page?
   59 "https://www.google.ru/"
+  
 How many requests were there from each ip?
    3 66.102.9.32
    3 31.173.84.130
