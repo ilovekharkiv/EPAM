@@ -24,7 +24,7 @@ case $1 in
   ;;
   esac
 ```
-#### You'll find the screenshot with output of the script below:
+**You'll find the screenshot with output of the script below:**
 ![This is a alt text.](/Screenshots/linux_bash_1.png "Script output")
 
 
