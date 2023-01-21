@@ -193,71 +193,48 @@ In case of adding new or deleting old files, the script must add a corresponding
 indicating the time, type of operation and file name. [The command to run the script must be added to
 crontab with a run frequency of one minute]
 
-**Here is the script itselft. It is also uploaded to the current folder of this repo and called `part_c.sh`**
+### Here is the script itselft. It is also uploaded to the current folder of this repo and called `part_c.sh`
+
 ```bash
 #!/bin/bash
 
 TIMESTAMP=`date "+%Y-%m-%d %H:%M:%S"`
 
 echo "Backup has started"
-rsync -avv $1 $2 --log-file=backup_log.log
+rsync -ar --delete $1 $2 --log-file=$HOME/Desktop/backup_log.log
 echo "Wait a sec, $USER"
 sleep 1
-echo -e "Backup has been finished. Check ~/Desktop/mylog.log \nCurrent time is $TIMESTAMP"
+echo -e "Backup has been finished. Current time is $TIMESTAMP"
 ```
-**Let's make a backup of `~/Desktop/EPAM/` folder and name it as `EPAM_COPY`**
-```bash
-pavlo@pavlo-Z490-UD:~/Desktop/EPAM/L1/Homework #1. Linux Bash$ ./part_c.sh ~/Desktop/EPAM/ ~/Desktop/EPAM_COPY
-Backup has started
-sending incremental file list
-created directory /home/pavlo/Desktop/EPAM_COPY
-delta-transmission disabled for local transfer or --whole-file
-./
-L0 Scripts/
-L0 Scripts/README.md
-L0 Scripts/console.sh
-L0 Scripts/file.txt
-L0 Scripts/forloop.sh
-L0 Scripts/forrange.sh
-L0 Scripts/my_service.sh
-L0 Scripts/my_service1.sh
-L0 Scripts/odd_even.sh
-L0 Scripts/part_a.sh
-L0 Scripts/positional.sh
-L0 Scripts/positional1.sh
-L0 Scripts/script.sh
-L0 Scripts/script1.sh
-L0 Scripts/script2.sh
-L0 Scripts/script3.sh
-L0 Scripts/until.sh
-L1/
-L1/Homework #1. Linux Bash/
-L1/Homework #1. Linux Bash/Homework #1. Linux Bash.md
-L1/Homework #1. Linux Bash/backup_log.log
-L1/Homework #1. Linux Bash/example_log_1.log
-L1/Homework #1. Linux Bash/example_log_2.txt
-L1/Homework #1. Linux Bash/part_a.sh
-L1/Homework #1. Linux Bash/part_b.sh
-L1/Homework #1. Linux Bash/part_c.sh
-L1/Homework #2. Databases/
-L1/Homework #2. Databases/Homework #2. Databases.md
-L1/Homework #2. Databases/Music.sql
-L1/Homework #2. Databases/Schemas/
-L1/Homework #2. Databases/Schemas/Database Schema
-L1/Homework #2. Databases/Schemas/Databases
-L1/Homework #2. Databases/Schemas/Schema
-L1/Homework #2. Databases/Schemas/Schema.drawio
-L1/Homework #2. Databases/Schemas/Schema2.drawio
-L1/Scripts/
-L1/Scripts/date.php
-L1/Scripts/hello.php
-total: matches=0  hash_hits=0  false_alarms=0 data=478569
+>I used `--delete` flag intentionally, since i wanted my backup folder `EPAM_COPY` to be fully synschronized with my main folder EPAM. I just didn't want to keep storing files which do not exist in `EPAM` folder.
 
-sent 481,221 bytes  received 782 bytes  964,006.00 bytes/sec
-total size is 477,100  speedup is 0.99
-Wait a sec, pavlo
+### I'd like to use `EPAM` folder for my script. Let's `ls -l` to make sure that `EPAM` foler exists
 
-Backup has been finished. Check ~/Desktop/mylog.log 
-Current time is 2023-01-21 16:16:40
+![This is a alt text.](/Screenshots/linux_bash_c1.png "linux_bash")
 
-```
+
+### Let's make a backup of `~/Desktop/EPAM/` folder and name it as `EPAM_COPY`
+
+![This is a alt text.](/Screenshots/linux_bash_c2.png "linux_bash")
+
+## Let's check the log file, it's called `backup_log.log` as per the name in our script
+
+![This is a alt text.](/Screenshots/linux_bash_c3.png "linux_bash")
+
+### Now it's time to automate the job and add it to `crontab`. Let's make sure that `cron` is running
+
+![This is a alt text.](/Screenshots/linux_bash_c4.png "linux_bash")
+
+### Let's add our script to the `crontab -e` and check the results with `crontab -l`
+
+![This is a alt text.](/Screenshots/linux_bash_c5.png "linux_bash")
+![This is a alt text.](/Screenshots/linux_bash_c6.png "linux_bash")
+
+### Finally, let's check script execution by `cron`
+1. Add file.txt to EPAM folder
+2. Wait until backup is made and check EPAM_COPY
+3. Delete file.txt from EPAM folder
+4. Wait until it is deleted from EPAM_COPY
+
+![This is a alt text.](/Screenshots/linux_bash_c7.png "linux_bash")
+![This is a alt text.](/Screenshots/linux_bash_c8.png "linux_bash")
