@@ -193,7 +193,7 @@ In case of adding new or deleting old files, the script must add a corresponding
 indicating the time, type of operation and file name. [The command to run the script must be added to
 crontab with a run frequency of one minute]
 
-### Here is the script itselft. It is also uploaded to the current folder of this repo and called `part_c.sh`
+**Here is the script itselft. It is also uploaded to the current folder of this repo and called `part_c.sh`**
 
 ```bash
 #!/bin/bash
@@ -208,29 +208,29 @@ echo -e "Backup has been finished. Current time is $TIMESTAMP"
 ```
 >I used `--delete` flag intentionally, since i wanted my backup folder `EPAM_COPY` to be fully synschronized with my main folder EPAM. I just didn't want to keep storing files which do not exist in `EPAM` folder.
 
-### I'd like to use `EPAM` folder for my script. Let's `ls -l` to make sure that `EPAM` foler exists
+**I'd like to use `EPAM` folder for my script. Let's `ls -l` to make sure that `EPAM` foler exists**
 
 ![This is a alt text.](/Screenshots/linux_bash_c1.png "linux_bash")
 
 
-### Let's make a backup of `~/Desktop/EPAM/` folder and name it as `EPAM_COPY`
+**Let's make a backup of `~/Desktop/EPAM/` folder and name it as `EPAM_COPY`**
 
 ![This is a alt text.](/Screenshots/linux_bash_c2.png "linux_bash")
 
-## Let's check the log file, it's called `backup_log.log` as per the name in our script
+**Let's check the log file, it's called `backup_log.log` as per the name in our script**
 
 ![This is a alt text.](/Screenshots/linux_bash_c3.png "linux_bash")
 
-### Now it's time to automate the job and add it to `crontab`. Let's make sure that `cron` is running
+**Now it's time to automate the job and add it to `crontab`. Let's make sure that `cron` is running**
 
 ![This is a alt text.](/Screenshots/linux_bash_c4.png "linux_bash")
 
-### Let's add our script to the `crontab -e` and check the results with `crontab -l`
+**Let's add our script to the `crontab -e` and check the results with `crontab -l`**
 
 ![This is a alt text.](/Screenshots/linux_bash_c5.png "linux_bash")
 ![This is a alt text.](/Screenshots/linux_bash_c6.png "linux_bash")
 
-### Finally, let's check script execution by `cron`
+**Finally, let's check script execution by `cron`**
 1. Add file.txt to EPAM folder
 2. Wait until backup is made and check EPAM_COPY
 3. Delete file.txt from EPAM folder
