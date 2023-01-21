@@ -1,5 +1,5 @@
 # Table of Contents
-#### [Part 1](https://github.com/ilovekharkiv/EPAM/blob/master/Homework%20%232.%20Databases.md#part-1](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%232.%20Databases/Homework%20%232.%20Databases.md#part-1-1)
+#### [Part 1](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%232.%20Databases/Homework%20%232.%20Databases.md#part-1-1)
 1. [Download MySQL server for your OS on VM](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%232.%20Databases.md#part-1)
 2. [Install MySQL server on VM](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%232.%20Databases.md#2-install-mysql-server-on-vm) 
 3. [Select a subject area and describe the database schema](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%232.%20Databases.md#3-select-a-subject-area-and-describe-the-database-schema) 
