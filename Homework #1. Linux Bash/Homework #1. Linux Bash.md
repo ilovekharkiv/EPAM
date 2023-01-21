@@ -1,6 +1,5 @@
 
-## [Part A. Create a script that uses the following keys:](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%231.%20Linux%20Bash.md#part-2) 
-
+## [Part A. Create a script that uses the following keys:](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%231.%20Linux%20Bash/Homework%20%231.%20Linux%20Bash.md#part-b-using-apache-log-example-create-a-script-to-answer-the-following-questions) 
 
 1. When starting without parameters, it will display a list of possible keys and their description.
 2. The --all key displays the IP addresses and symbolic names of all hosts in the current subnet
@@ -25,7 +24,7 @@ case $1 in
   esac
 ```
 
-## [Part B. Using Apache log example create a script to answer the following questions](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%231.%20Linux%20Bash.md#part-2) 
+## [Part B. Using Apache log example create a script to answer the following questions](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%231.%20Linux%20Bash/Homework%20%231.%20Linux%20Bash.md#part-b-using-apache-log-example-create-a-script-to-answer-the-following-questions) 
 1. From which ip were the most requests?
 2. What is the most requested page?
 3. How many requests were there from each ip?
