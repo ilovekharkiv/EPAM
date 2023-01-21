@@ -1,5 +1,5 @@
 
-## [Part A. Create a script that uses the following keys:]() 
+## [Part A. Create a script that uses the following keys:](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%231.%20Linux%20Bash/Homework%20%231.%20Linux%20Bash.md#part-a-create-a-script-that-uses-the-following-keys) 
 
 
 1. When starting without parameters, it will display a list of possible keys and their description.
