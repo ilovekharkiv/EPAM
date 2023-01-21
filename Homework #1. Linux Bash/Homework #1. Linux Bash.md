@@ -25,7 +25,7 @@ case $1 in
   esac
 ```
 #### You'll find the screenshot with output of the script below:
-![This is a alt text.](/Screenshots/part_a.png "Script output")
+![This is a alt text.](/Screenshots/linux_bash_1.png "Script output")
 
 
 ## [Part B. Using Apache log example create a script to answer the following questions](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%231.%20Linux%20Bash.md#part-2) 
