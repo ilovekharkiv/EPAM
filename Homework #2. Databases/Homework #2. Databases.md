@@ -1,8 +1,8 @@
 # Table of Contents
 #### [Part 1](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%232.%20Databases/Homework%20%232.%20Databases.md#part-1-1)
-1. [Download MySQL server for your OS on VM](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%232.%20Databases.md#part-1)
+1. [Download MySQL server for your OS on VM](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%232.%20Databases/Homework%20%232.%20Databases.md#1-download-mysql-server-for-your-os-on-vm)
 2. [Install MySQL server on VM](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%232.%20Databases.md#2-install-mysql-server-on-vm) 
-3. [Select a subject area and describe the database schema](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%232.%20Databases.md#3-select-a-subject-area-and-describe-the-database-schema) 
+3. [Select a subject area and describe the database schema](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%232.%20Databases/Homework%20%232.%20Databases.md#3-select-a-subject-area-and-describe-the-database-schema) 
 4. [Create a database on the server through the console](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%232.%20Databases.md#4-create-a-database-on-the-server-through-the-console) 
 5. [Fill in tables](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%232.%20Databases.md#5-fill-in-tables) 
 6. [Construct and execute SELECT operator with WHERE, GROUP BY and ORDER BY](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%232.%20Databases.md#6-construct-and-execute-select-operator-with-where-group-by-and-order-by) 
