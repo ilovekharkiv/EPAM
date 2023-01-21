@@ -168,8 +168,10 @@ What non-existent pages were clients referred to?
 "http://example.com/ehsteticheskaya-medicina/injekcii/oblasti-lica-dlya-primeneniya-kozhnykh-fi.html"
 "http://example.com/ehsteticheskaya-medicina/injekcii/biorevitalizaciya/preparaty-dlya-biorevitalizacii.html"
 "-"
+
 What time did site get the most requests?
    4 [25/Apr/2017:11:40:56 +0400]
+   
 What search bots have accessed the site? UA + IP 
 217.182.132.183 AhrefsBot/5.2; +http://ahrefs.com/robot/)"
 207.46.13.3 bingbot/2.0; +http://www.bing.com/bingbot.htm)"
