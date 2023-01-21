@@ -1,4 +1,29 @@
 
+## [Part A. Create a script that uses the following keys:](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%231.%20Linux%20Bash.md#part-2) 
+
+
+1. When starting without parameters, it will display a list of possible keys and their description.
+2. The --all key displays the IP addresses and symbolic names of all hosts in the current subnet
+3. The --target key displays a list of open system TCP ports.
+The code that performs the functionality of each of the subtasks must be placed in a separate function
+
+```bash
+#! /bin/bash
+
+case $1 in
+   --all)
+    echo "displays the IP addresses and symbolic names of all hosts in the current subnet" 
+    sudo arp-scan --localnet | cut -f 1,3 
+    ;;
+  --target)
+    echo "displays a list of open system TCP ports."
+    ss -tlpn
+    ;; 
+  *)
+  echo -e "The --all key displays the IP addresses and symbolic names of all hosts in the current subnet.\nThe --target key displays a list of open system TCP ports."
+  ;;
+  esac
+```
 
 ## [Part B. Using Apache log example create a script to answer the following questions](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%231.%20Linux%20Bash.md#part-2) 
 1. From which ip were the most requests?
