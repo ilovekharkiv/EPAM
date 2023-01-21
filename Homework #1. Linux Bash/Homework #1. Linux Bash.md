@@ -24,8 +24,8 @@ case $1 in
   ;;
   esac
 ```
-
-![This is a alt text.](/Screenshots/03.png "Output")
+#### You'll find the screenshot with output of the script below:
+![This is a alt text.](/Screenshots/part_a.png "Database schema")
 
 
 ## [Part B. Using Apache log example create a script to answer the following questions](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%231.%20Linux%20Bash.md#part-2) 
