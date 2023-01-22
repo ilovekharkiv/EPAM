@@ -513,6 +513,17 @@ mysql> SELECT * FROM artists;
 ![This is a alt text.](/Screenshots/imp3.png "imp")
 ![This is a alt text.](/Screenshots/imp4.png "imp")
 
+> I used `MySQL Workbench` intentionally since i wanted to show this task more visually and i personally like it. I guess, common practice is to use the comamnd below to make a database dump, which of course might save some time when needed.
+```
+mysqldump -h source_MySQL_DB_instance_endpoint \
+    -u user \
+    -ppassword \
+    --port=3306 \
+    --single-transaction \
+    --routines \
+    --triggers \
+    --databases  database database2 > path/rds-dump.sql
+```
 
 ## Part 3
 ### 17. Create a database. Use the use command to connect to a new database (If it doesn't exist, Mongo will create it when you write to it)
