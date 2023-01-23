@@ -1,4 +1,4 @@
-# Here is the network schema
+# Нижче схема мережі для домашньго завдання, вже з сабнетами які я буду використовувати
 ![This is a alt text.](/Screenshots/networking_1.png "networking")
 
 Host – це комп’ютер, на якому запущений Virtual Box;
@@ -15,7 +15,7 @@ Client_1 та Client_2 – Віртуальні машини, на яких ро
 - Адреса мережі Net3 – 10.M.Y.0/24, де M – номер місяця народження.
 - Адреса мережі Net4 – 172.16.D.0/24
 
-
+#### Базові настройки з віртуалбокса
 ![This is a alt text.](/Screenshots/server_1_vb.png "server1")
 ![This is a alt text.](/Screenshots/client_1_vb.png "server1")
 ![This is a alt text.](/Screenshots/client_2_vb.png "server1")
