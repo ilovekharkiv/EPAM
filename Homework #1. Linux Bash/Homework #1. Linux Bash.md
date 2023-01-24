@@ -5,7 +5,8 @@
 1. When starting without parameters, it will display a list of possible keys and their description.
 2. The --all key displays the IP addresses and symbolic names of all hosts in the current subnet
 3. The --target key displays a list of open system TCP ports.
-The code that performs the functionality of each of the subtasks must be placed in a separate function
+The code that performs the functionality of each of the subtasks must be placed in a separate function.
+> I did `Part a` script as a separate sections of `case` statement without writing separate functions, i thought it's more convenient in this case particularly. Also, i used `arp-scan` since `nmap` was restricted by our bash lecturer.
 
 **Here is the script itselft. It is also uploaded to the current folder of this repo and called `part_a.sh`**
 
