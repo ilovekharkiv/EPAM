@@ -1,4 +1,4 @@
-## Нижче схема мережі для домашньго завдання
+## Нижче схема мережі для домашнього завдання
 ![This is a alt text.](/Screenshots/networking_1.png "networking")
 
 Host – це комп’ютер, на якому запущений Virtual Box;
