@@ -23,31 +23,6 @@ Client_1 та Client_2 – Віртуальні машини, на яких ро
 
 ## Table of contents
 #### 1. [На Server_1 налаштувати статичні адреси на всіх інтерфейсах.](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%233.%20Linux%20Networking/Homework%20%233.%20Linux%20Networking.md#1-%D0%BD%D0%B0-server_1-%D0%BD%D0%B0%D0%BB%D0%B0%D1%88%D1%82%D1%83%D0%B2%D0%B0%D1%82%D0%B8-%D1%81%D1%82%D0%B0%D1%82%D0%B8%D1%87%D0%BD%D1%96-%D0%B0%D0%B4%D1%80%D0%B5%D1%81%D0%B8-%D0%BD%D0%B0-%D0%B2%D1%81%D1%96%D1%85-%D1%96%D0%BD%D1%82%D0%B5%D1%80%D1%84%D0%B5%D0%B9%D1%81%D0%B0%D1%85-1)
-#### 2. [На Server_1 налаштувати DHCP сервіс, який буде конфігурувати адреси Int1 Client_1 та Client_2](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%233.%20Linux%20Networking/Homework%20%233.%20Linux%20Networking.md#2-%D0%BD%D0%B0-server_1-%D0%BD%D0%B0%D0%BB%D0%B0%D1%88%D1%82%D1%83%D0%B2%D0%B0%D1%82%D0%B8-dhcp-%D1%81%D0%B5%D1%80%D0%B2%D1%96%D1%81-%D1%8F%D0%BA%D0%B8%D0%B9-%D0%B1%D1%83%D0%B4%D0%B5-%D0%BA%D0%BE%D0%BD%D1%84%D1%96%D0%B3%D1%83%D1%80%D1%83%D0%B2%D0%B0%D1%82%D0%B8-%D0%B0%D0%B4%D1%80%D0%B5%D1%81%D0%B8-int1-client_1-%D1%82%D0%B0-client_2-1)
-![This is a alt text.](/Screenshots/networking_1.png "networking")
-
-Host – це комп’ютер, на якому запущений Virtual Box;
-Server_1 – Віртуальна машина, на якій розгорнуто ОС Linux. Int1 цієї машини в
-режимі «Мережевий міст» підключений до мережі Net1, тобто знаходиться в адресному
-просторі домашньої мережі. IP-адреса Int1 встановлюється статично відповідно до
-адресного простору, наприклад 192.168.1.200/24. Інтерфейси Int2 та Int3 відповідно
-підключено в режимі «Внутрішня мережа» до мереж Net2 та Net3.
-Client_1 та Client_2 – Віртуальні машини, на яких розгорнуто ОС Linux (бажано
-різні дистрибутиви, наприклад Ubuntu та CentOS). Інтерфейси підключені в режимі
-«Внутрішня мережа» до мереж Net2, Net3 та Net4 як показано на рисунку 1.
-- Адреса мережі Net2 – 10.Y.D.0/24, де Y – дві останні цифри з вашого року
-народження, D – дата народження.
-- Адреса мережі Net3 – 10.M.Y.0/24, де M – номер місяця народження.
-- Адреса мережі Net4 – 172.16.D.0/24
-
-Первинні налаштування `VirtualBox`
-
-![This is a alt text.](/Screenshots/server_1_vb.png "server1")
-![This is a alt text.](/Screenshots/client_1_vb.png "client1")
-![This is a alt text.](/Screenshots/client_2_vb.png "client2")
-
-## Table of contents
-#### 1. [На Server_1 налаштувати статичні адреси на всіх інтерфейсах.](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%233.%20Linux%20Networking/Homework%20%233.%20Linux%20Networking.md#1-%D0%BD%D0%B0-server_1-%D0%BD%D0%B0%D0%BB%D0%B0%D1%88%D1%82%D1%83%D0%B2%D0%B0%D1%82%D0%B8-%D1%81%D1%82%D0%B0%D1%82%D0%B8%D1%87%D0%BD%D1%96-%D0%B0%D0%B4%D1%80%D0%B5%D1%81%D0%B8-%D0%BD%D0%B0-%D0%B2%D1%81%D1%96%D1%85-%D1%96%D0%BD%D1%82%D0%B5%D1%80%D1%84%D0%B5%D0%B9%D1%81%D0%B0%D1%85-1)
 #### 2. [На Server_1 налаштувати DHCP сервіс, який буде конфігурувати адреси Int1 Client_1 та Client_2]()
 #### 3. [За допомогою команд ping та traceroute перевірити зв'язок між віртуальнимимашинами. Результат пояснити.]()
 #### 4. [На віртуальному інтерфейсу lo Client_1 призначити дві ІР адреси за таким правилом: 172.17.D+10.1/24 та 172.17.D+20.1/24. Налаштувати маршрутизацію таким чином, щоб трафік з Client_2 до 172.17.D+10.1 проходив через Server_1, а до 172.17.D+20.1 через Net4. Для перевірки використати traceroute]()
