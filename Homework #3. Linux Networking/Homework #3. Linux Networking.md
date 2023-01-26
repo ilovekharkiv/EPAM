@@ -16,6 +16,7 @@ Client_1 та Client_2 – Віртуальні машини, на яких ро
 - Адреса мережі Net4 – 172.16.D.0/24
 
 Первинні налаштування `VirtualBox`
+
 ![This is a alt text.](/Screenshots/server_1_vb.png "server1")
 ![This is a alt text.](/Screenshots/client_1_vb.png "client1")
 ![This is a alt text.](/Screenshots/client_2_vb.png "client2")
