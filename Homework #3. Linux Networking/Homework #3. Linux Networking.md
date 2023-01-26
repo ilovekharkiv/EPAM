@@ -23,7 +23,7 @@ Client_1 та Client_2 – Віртуальні машини, на яких ро
 
 ## Table of contents
 #### 1. [На Server_1 налаштувати статичні адреси на всіх інтерфейсах.](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%233.%20Linux%20Networking/Homework%20%233.%20Linux%20Networking.md#1-%D0%BD%D0%B0-server_1-%D0%BD%D0%B0%D0%BB%D0%B0%D1%88%D1%82%D1%83%D0%B2%D0%B0%D1%82%D0%B8-%D1%81%D1%82%D0%B0%D1%82%D0%B8%D1%87%D0%BD%D1%96-%D0%B0%D0%B4%D1%80%D0%B5%D1%81%D0%B8-%D0%BD%D0%B0-%D0%B2%D1%81%D1%96%D1%85-%D1%96%D0%BD%D1%82%D0%B5%D1%80%D1%84%D0%B5%D0%B9%D1%81%D0%B0%D1%85-1)
-#### 2. [На Server_1 налаштувати DHCP сервіс, який буде конфігурувати адреси Int1 Client_1 та Client_2](## Here is the network schema
+#### 2. [На Server_1 налаштувати DHCP сервіс, який буде конфігурувати адреси Int1 Client_1 та Client_2](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%233.%20Linux%20Networking/Homework%20%233.%20Linux%20Networking.md#2-%D0%BD%D0%B0-server_1-%D0%BD%D0%B0%D0%BB%D0%B0%D1%88%D1%82%D1%83%D0%B2%D0%B0%D1%82%D0%B8-dhcp-%D1%81%D0%B5%D1%80%D0%B2%D1%96%D1%81-%D1%8F%D0%BA%D0%B8%D0%B9-%D0%B1%D1%83%D0%B4%D0%B5-%D0%BA%D0%BE%D0%BD%D1%84%D1%96%D0%B3%D1%83%D1%80%D1%83%D0%B2%D0%B0%D1%82%D0%B8-%D0%B0%D0%B4%D1%80%D0%B5%D1%81%D0%B8-int1-client_1-%D1%82%D0%B0-client_2-1)
 ![This is a alt text.](/Screenshots/networking_1.png "networking")
 
 Host – це комп’ютер, на якому запущений Virtual Box;
