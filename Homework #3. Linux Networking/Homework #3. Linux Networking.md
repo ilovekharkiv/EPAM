@@ -23,8 +23,8 @@ Client_1 та Client_2 – Віртуальні машини, на яких ро
 
 ## Table of contents
 #### 1. [На Server_1 налаштувати статичні адреси на всіх інтерфейсах.](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%233.%20Linux%20Networking/Homework%20%233.%20Linux%20Networking.md#1-%D0%BD%D0%B0-server_1-%D0%BD%D0%B0%D0%BB%D0%B0%D1%88%D1%82%D1%83%D0%B2%D0%B0%D1%82%D0%B8-%D1%81%D1%82%D0%B0%D1%82%D0%B8%D1%87%D0%BD%D1%96-%D0%B0%D0%B4%D1%80%D0%B5%D1%81%D0%B8-%D0%BD%D0%B0-%D0%B2%D1%81%D1%96%D1%85-%D1%96%D0%BD%D1%82%D0%B5%D1%80%D1%84%D0%B5%D0%B9%D1%81%D0%B0%D1%85-1)
-#### 2. [На Server_1 налаштувати DHCP сервіс, який буде конфігурувати адреси Int1 Client_1 та Client_2]()
-#### 3. [За допомогою команд ping та traceroute перевірити зв'язок між віртуальнимимашинами. Результат пояснити.]()
+#### 2. [На Server_1 налаштувати DHCP сервіс, який буде конфігурувати адреси Int1 Client_1 та Client_2](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%233.%20Linux%20Networking/Homework%20%233.%20Linux%20Networking.md#2-%D0%BD%D0%B0-server_1-%D0%BD%D0%B0%D0%BB%D0%B0%D1%88%D1%82%D1%83%D0%B2%D0%B0%D1%82%D0%B8-dhcp-%D1%81%D0%B5%D1%80%D0%B2%D1%96%D1%81-%D1%8F%D0%BA%D0%B8%D0%B9-%D0%B1%D1%83%D0%B4%D0%B5-%D0%BA%D0%BE%D0%BD%D1%84%D1%96%D0%B3%D1%83%D1%80%D1%83%D0%B2%D0%B0%D1%82%D0%B8-%D0%B0%D0%B4%D1%80%D0%B5%D1%81%D0%B8-int1-client_1-%D1%82%D0%B0-client_2-1)
+#### 3. [За допомогою команд ping та traceroute перевірити зв'язок між віртуальнимимашинами. Результат пояснити.](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%233.%20Linux%20Networking/Homework%20%233.%20Linux%20Networking.md#3-%D0%B7%D0%B0-%D0%B4%D0%BE%D0%BF%D0%BE%D0%BC%D0%BE%D0%B3%D0%BE%D1%8E-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4-ping-%D1%82%D0%B0-traceroute-%D0%BF%D0%B5%D1%80%D0%B5%D0%B2%D1%96%D1%80%D0%B8%D1%82%D0%B8-%D0%B7%D0%B2%D1%8F%D0%B7%D0%BE%D0%BA-%D0%BC%D1%96%D0%B6-%D0%B2%D1%96%D1%80%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D0%B8%D0%BC%D0%B8%D0%BC%D0%B0%D1%88%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8-%D1%80%D0%B5%D0%B7%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%82-%D0%BF%D0%BE%D1%8F%D1%81%D0%BD%D0%B8%D1%82%D0%B8-1)
 #### 4. [На віртуальному інтерфейсу lo Client_1 призначити дві ІР адреси за таким правилом: 172.17.D+10.1/24 та 172.17.D+20.1/24. Налаштувати маршрутизацію таким чином, щоб трафік з Client_2 до 172.17.D+10.1 проходив через Server_1, а до 172.17.D+20.1 через Net4. Для перевірки використати traceroute]()
 #### 5. [Розрахувати спільну адресу та маску (summarizing) адрес 172.17.D+10.1 та 172.17.D+20.1, при чому префікс має бути максимально можливим. Видалити маршрути, встановлені на попередньому кроці та замінити їх об’єднаним маршрутом, якій має проходити через Server_1.]()
 #### 6. [Налаштувати SSH сервіс таким чином, щоб Client_1 та Client_2 могли підключатись до Server_1 та один до одного.]()
@@ -64,7 +64,7 @@ Client_1 та Client_2 – Віртуальні машини, на яких ро
 ![This is a alt text.](/Screenshots/client_2_ubuntu1.png "ubuntu")
 
 
-### 3. [За допомогою команд ping та traceroute перевірити зв'язок між віртуальнимимашинами. Результат пояснити.]()
+### 3. За допомогою команд ping та traceroute перевірити зв'язок між віртуальнимимашинами. Результат пояснити.
 
 >Увага! Для того, щоб з Client_1 та Client_2 проходили пакети в мережу Internet (точніше щоб повертались з Internet на Client_1 та Client_2) >на Wi-Fi Router необхідно налаштувати статичні маршрути для мереж Net2 та Net3. Якщо такої можливості немає інтерфейс Int1 на Server_1 >перевести в режим NAT.
 
