@@ -23,23 +23,28 @@ Client_1 та Client_2 – Віртуальні машини, на яких ро
 1. [На Server_1 налаштувати статичні адреси на всіх інтерфейсах.]()
 Початковий стан інтерфейсів
 ![This is a alt text.](/Screenshots/initial_settings_server1.png "server1")
+
 Файл настрокий інтерфейсів `/etc/netplan/server_1.yaml` після внесення налаштувань всіх інтерфейсів 
 ![This is a alt text.](/Screenshots/server_1_yaml.png "server1")
-Викноаємо команду `netplan try` та підтвердимо коректність введених даних і пеервіримо налаштування командою `ip a`
+
+Виконаємо команду `netplan try` та підтвердимо коректність введених даних і пеервіримо налаштування командою `ip a`
 ![This is a alt text.](/Screenshots/server_1_yaml_ipa.png "server1")
 
 2. [На Server_1 налаштувати DHCP сервіс, який буде конфігурувати адреси Int1 Client_1 та Client_2]()
 Встановив DHCP за допомогою команди `sudo apt install isc-dhcp-server` та почав налаштовувати у файлі `/etc/dhcp/dhcpd.conf`. Далі скрин з налаштуваннями файлу
 ![This is a alt text.](/Screenshots/dhcpd.png "dhcpd")
+
 Виконаємо рестарт `sudo systemctl status isc-dhcp-server` та перевіримо чи активний сервіс `dhcp` за допомогою команди `sudo systemctl status isc-dhcp-server`
 ![This is a alt text.](/Screenshots/dhcpd_1.png "dhcpd")
 
 `Client_1 - CentOS`. Налаштуємо int1(`enp0s8 - Net_2`) та одразу int2(`enp0s9 - Net_4`) 
+
 Создамо та налаштуємо конфігураційні файли для кожного інтерфейса, це є особливістю CentOS мати конф. файл для кожного мережевого інтерфейсу.
 ![This is a alt text.](/Screenshots/client_1_centos.png "centos")
 ![This is a alt text.](/Screenshots/client_1_centos1.png "centos")
 
 `Client_2 - Ubuntu`. Налаштуємо int1(`enp0s8 - Net_3`) та одразу int2(`enp0s9 - Net_4`) 
+
 Налаштуємо конфігураційний файл мережевих інтерфейсів
 ![This is a alt text.](/Screenshots/client_1_ubuntu.png "ubuntu")
 ![This is a alt text.](/Screenshots/client_1_ubuntu1.png "ubuntu")
