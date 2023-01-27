@@ -159,13 +159,13 @@ Client_1 та Client_2 – Віртуальні машини, на яких ро
 Переконаємось, що ssh налаштован належним чином на всіх машинах і є можливість зайди на кожну з них з будь якої іншої
 
 6.4. Перевіримо **Client_1 <=> Client_2** 
-![This is a alt text.](/Screenshots/ssh1.png "ssh")
+![This is a alt text.](/Screenshots/ssh_1.png "ssh")
 
 6.5. Перевіримо **Server_1 => Client_1/Client_2** 
-![This is a alt text.](/Screenshots/ssh2.png "ssh")
+![This is a alt text.](/Screenshots/ssh_2.png "ssh")
 
 6.6. Перевіримо **Client_1/Client_2 => Server_1** 
-![This is a alt text.](/Screenshots/ssh3.png "ssh")
+![This is a alt text.](/Screenshots/ssh_3.png "ssh")
 
 
 ### 7. Налаштуйте на Server_1 firewall таким чином: - Дозволено підключатись через SSH з Client_1 та заборонено з Client_2. - З Client_2 на 172.17.D+10.1 ping проходив, а на 172.17.D+20.1 не проходив
