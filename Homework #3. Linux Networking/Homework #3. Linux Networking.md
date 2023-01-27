@@ -146,9 +146,15 @@ Client_1 та Client_2 – Віртуальні машини, на яких ро
 
 6.1. **Client_1** - перевірив чи працює `OpenSSH` дємон, згенерував ssh-ключи та за допомогою команди `ssh-copy-id server1@10.89.1.8` скопіював ключи на **Server_1**, та на **Client_2** командою `ssh-copy-id client2@10.1.89.50` відповідно.
 
+![This is a alt text.](/Screenshots/ssh_1.png "ssh1")
+
 6.2. **Server_1** - перевірив чи працює `OpenSSH` дємон, згенерував ssh-ключи та за допомогою команди `ssh-copy-id client1@10.89.1.50` скопіював ключи на **Client_1**, та на **Client_2** командою `ssh-copy-id client2@10.1.89.50` відповідно.
 
+![This is a alt text.](/Screenshots/ssh_2.png "ssh2")
+
 6.3. **Client_2** - перевірив чи працює `OpenSSH` дємон, згенерував ssh-ключи та за допомогою команди `ssh-copy-id server1@10.1.89.9` скопіював ключи на **Server_1**, та на **Client_2** командою `ssh-copy-id client1@10.89.1.50` відповідно.
+
+![This is a alt text.](/Screenshots/ssh_3.png "ssh2")
 
 Переконаємось, що ssh налаштован належним чином на всіх машинах і є можливість зайди на кожну з них з будь якої іншої
 
