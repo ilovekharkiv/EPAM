@@ -116,7 +116,31 @@ Client_1 та Client_2 – Віртуальні машини, на яких ро
 
 ![This is a alt text.](/Screenshots/summ.png "summ")
 
+5.1. `Server_1` - попередні маршрути були видалені. Додаю новий маршрут в конфігураційний файл.
 
+![This is a alt text.](/Screenshots/summ_server1.png "summ")
+
+5.2. `Client_1` - попередні маршрути були видалені. Додаю новий маршрут в конфігураційний файл.
+
+![This is a alt text.](/Screenshots/summ_client1.png "summ")
+
+5.3. `Client_2` - попередні маршрути були видалені. Додаю новий маршрут в конфігураційний файл.
+
+![This is a alt text.](/Screenshots/summ_client2.png "summ")
+
+5.4. Перевіряємо чи вииконали ми завдання і чи ходять пакети через `Server_1`. Запустимо `traceroute` на обидва айпішніка із завдання щоб перевірити напрямок пакетів.
+
+`traceroute 172.17.11.1`
+
+![This is a alt text.](/Screenshots/summ_traceroute1.png "summ")
+
+`traceroute 172.17.21.1`
+
+![This is a alt text.](/Screenshots/summ_traceroute2.png "summ")
+
+5.5. Перевіряємо чи ходять пакети в зворотньому напрямку, щоб знати що маршрут працює належним чином
+
+![This is a alt text.](/Screenshots/summ_traceroute3.png "summ")
 
 ### 6. Налаштувати SSH сервіс таким чином, щоб Client_1 та Client_2 могли підключатись до Server_1 та один до одного.
 ### 7. Налаштуйте на Server_1 firewall таким чином: - Дозволено підключатись через SSH з Client_1 та заборонено з Client_2. - З Client_2 на 172.17.D+10.1 ping проходив, а на 172.17.D+20.1 не проходив
