@@ -155,10 +155,10 @@ Client_1 та Client_2 – Віртуальні машини, на яких ро
 6.4. Перевіримо **Client_1 <=> Client_2** 
 ![This is a alt text.](/Screenshots/ssh1.png "ssh")
 
-6.5. Перевіримо **Server_1 <=> Client_1/Client_2** 
+6.5. Перевіримо **Server_1 => Client_1/Client_2** 
 ![This is a alt text.](/Screenshots/ssh2.png "ssh")
 
-6.6. Перевіримо **Client_1/Client_2 <=> Server_1** 
+6.6. Перевіримо **Client_1/Client_2 => Server_1** 
 ![This is a alt text.](/Screenshots/ssh3.png "ssh")
 
 
