@@ -179,7 +179,7 @@ Client_1 та Client_2 – Віртуальні машини, на яких ро
 
 >Мені не потрібно закривати порт 22 на Server_1 на постійній основі, тому я не сохраняв ії через `iptables-save`
 
-6.7. Заборонимо "транзитний" ICMP трафік на `Server_1` у напрямку `172.17.D+20.1`. Додамо правило до `iptables` за допомогою команди `sudo iptables -A FORWARD -p icmp -d 172.17.21.1 -j DROP`
+6.7. Заборонимо "транзитний" ICMP трафік на `Server_1` у напрямку `172.17.D+20.1` з `Client_2`. Додамо правило до `iptables` за допомогою команди `sudo iptables -A FORWARD -p icmp -s 10.1.89.50 -d 172.17.21.1 -j DROP`
 
 ![This is a alt text.](/Screenshots/iptables_2.png "iptables")
 
