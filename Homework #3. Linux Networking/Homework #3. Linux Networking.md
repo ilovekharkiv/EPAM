@@ -192,10 +192,14 @@ Client_1 та Client_2 – Віртуальні машини, на яких ро
 
 ### 8. Якщо в п.3 була налаштована маршрутизація для доступу Client_1 та Client_2 до мережі Інтернет – видалити відповідні записи. На Server_1 налаштувати NAT сервіс таким чином, щоб з Client_1 та Client_2 проходив ping в мережу Інтернет
 
-Заборонимо `Client_2` заходити на `Server_1` по `ssh`. Додамо правило до `iptables` за допомогою команди 
+Налаштуємо NAT сервіс за допомогою команди нижче, додамо правило до `iptables` на `Server_1` 
 
-    sudo iptables -t nat -A POSTROUTING -j MASQUERADE && iptables-save
+    sudo iptables -t nat -A POSTROUTING -o enp0s3 -j MASQUERADE && iptables-save
 
 ![This is a alt text.](/Screenshots/nat.png "iptables")
+
+Перевіримо чи ходять пакети назовні на обох машинах
+
+![This is a alt text.](/Screenshots/nat1.png "iptables")
 
 
