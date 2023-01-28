@@ -154,21 +154,38 @@ Client_1 та Client_2 – Віртуальні машини, на яких ро
 
 6.3. **Client_2** - перевірив чи працює `OpenSSH` дємон, згенерував ssh-ключи та за допомогою команди `ssh-copy-id server1@10.1.89.9` скопіював ключи на **Server_1**, та на **Client_2** командою `ssh-copy-id client1@10.89.1.50` відповідно.
 
-![This is a alt text.](/Screenshots/ssh_3.png "ssh3")
+![This is a alt text.](/Screenshots/ssh_3.png "ssh2")
 
 Переконаємось, що ssh налаштован належним чином на всіх машинах і є можливість зайди на кожну з них з будь якої іншої
 
 6.4. Перевіримо **Client_1 <=> Client_2** 
+
 ![This is a alt text.](/Screenshots/ssh_4.png "ssh")
 
 6.5. Перевіримо **Server_1 => Client_1/Client_2** 
+
 ![This is a alt text.](/Screenshots/ssh_5.png "ssh")
 
 6.6. Перевіримо **Client_1/Client_2 => Server_1** 
+
 ![This is a alt text.](/Screenshots/ssh_6.png "ssh")
 
 
 ### 7. Налаштуйте на Server_1 firewall таким чином: - Дозволено підключатись через SSH з Client_1 та заборонено з Client_2. - З Client_2 на 172.17.D+10.1 ping проходив, а на 172.17.D+20.1 не проходив
+
+6.6. Заборонимо `Client_2` заходити на `Server_1` по `ssh`. Додамо правило до `iptables` за допомогою команди `sudo iptables -A INPUT -i enp0s9 -p tcp -s 10.1.89.50 --dport 22 -j DROP`
+
+![This is a alt text.](/Screenshots/iptables_1.png "iptables")
+
+>Мені не потрібно закривати порт 22 на Server_1 на постійній основі, тому я не сохраняв ії через `iptables-save`
+
+6.7. Заборонимо "транзитний" ICMP трафік на `Server_1` у напрямку `172.17.D+20.1`. Додамо правило до `iptables` за допомогою команди `sudo iptables -A FORWARD -p icmp -d 172.17.21.1 -j DROP`
+
+![This is a alt text.](/Screenshots/iptables_2.png "iptables")
+
+>Мені не потрібно закривати "транзитний" ICMP трафік на `Server_1` на постійній основі, тому я не сохраняв ії через `iptables-save`
+
+
 ### 8. Якщо в п.3 була налаштована маршрутизація для доступу Client_1 та Client_2 до мережі Інтернет – видалити відповідні записи. На Server_1 налаштувати NAT сервіс таким чином, щоб з Client_1 та Client_2 проходив ping в мережу Інтернет
 
 
