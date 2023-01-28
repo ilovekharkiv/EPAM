@@ -173,13 +173,17 @@ Client_1 та Client_2 – Віртуальні машини, на яких ро
 
 ### 7. Налаштуйте на Server_1 firewall таким чином: - Дозволено підключатись через SSH з Client_1 та заборонено з Client_2. - З Client_2 на 172.17.D+10.1 ping проходив, а на 172.17.D+20.1 не проходив
 
-6.6. Заборонимо `Client_2` заходити на `Server_1` по `ssh`. Додамо правило до `iptables` за допомогою команди `sudo iptables -A INPUT -i enp0s9 -p tcp -s 10.1.89.50 --dport 22 -j DROP`
+6.6. Заборонимо `Client_2` заходити на `Server_1` по `ssh`. Додамо правило до `iptables` за допомогою команди 
+
+    sudo iptables -A INPUT -i enp0s9 -p tcp -s 10.1.89.50 --dport 22 -j DROP
 
 ![This is a alt text.](/Screenshots/iptables_1.png "iptables")
 
 >Мені не потрібно закривати порт 22 на Server_1 на постійній основі, тому я не сохраняв ії через `iptables-save`
 
-6.7. Заборонимо "транзитний" ICMP трафік на `Server_1` у напрямку `172.17.D+20.1` з `Client_2`. Додамо правило до `iptables` за допомогою команди `sudo iptables -A FORWARD -p icmp -s 10.1.89.50 -d 172.17.21.1 -j DROP`
+6.7. Заборонимо "транзитний" ICMP трафік на `Server_1` у напрямку `172.17.D+20.1` з `Client_2`. Додамо правило до `iptables` за допомогою команди 
+
+    sudo iptables -A FORWARD -p icmp -s 10.1.89.50 -d 172.17.21.1 -j DROP
 
 ![This is a alt text.](/Screenshots/iptables_2.png "iptables")
 
