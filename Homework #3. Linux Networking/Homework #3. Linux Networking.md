@@ -194,8 +194,7 @@ Client_1 та Client_2 – Віртуальні машини, на яких ро
 
 Заборонимо `Client_2` заходити на `Server_1` по `ssh`. Додамо правило до `iptables` за допомогою команди 
 
-    sudo iptables -t nat -A POSTROUTING -j MASQUERADE
-    sudo iptables-save
+    sudo iptables -t nat -A POSTROUTING -j MASQUERADE && iptables-save
 
 ![This is a alt text.](/Screenshots/nat.png "iptables")
 
