@@ -34,20 +34,20 @@
 2.1. Follow the instructions [to install MySQL](https://linuxhint.com/install-mysql-on-ubuntu-22-04/#:~:text=To%20install%20MySQL%20on%20Ubuntu%2022.04%2C%20first%2C%20execute%20the%20system,the%20%E2%80%9Csudo%20mysql_secure_installation%E2%80%9D%20command.) according to the guide.
 
 2.2. Check the status of your MySQL service
-![This is a alt text.](/Screenshots/01.png "mysql service")
+![](/Screenshots/01.png "mysql service")
 
 2.3. Check the existing databases with the following command 
 ```bash
 show databases;
 ```
-![This is a alt text.](/Screenshots/02.png "show databases")
+![](/Screenshots/02.png "show databases")
 
 ### 3. Select a subject area and describe the database schema
-![This is a alt text.](/Screenshots/03.png "Database schema")
+![](/Screenshots/03.png "Database schema")
 
 ### 4. Create a database on the server through the console
 We created the database with `CREATE TABLE Music;`, used it an checked whether it has any table or not.
-![This is a alt text.](/Screenshots/04.png "Database creation")
+![](/Screenshots/04.png "Database creation")
 
 ### 5. Fill in tables
 Let's make it one by one, screenshots are attached below.
@@ -71,7 +71,7 @@ VALUES
 (9,'PL','Polski','35m'),
 (11,'CAN','English','10m');
 ```
-![This is a alt text.](/Screenshots/05.png "countries")
+![](/Screenshots/05.png "countries")
 
 
 5.2 Let's continue with `labels` table
@@ -94,7 +94,7 @@ VALUES
 ('Random one',09,'2022-11-08'),
 ('Test task for EPAM-L1',011,'2022-11-07');
 ```
-![This is a alt text.](/Screenshots/06.png "labels")
+![](/Screenshots/06.png "labels")
 
 5.3 The last but not least is `artists` table
 
@@ -119,17 +119,17 @@ VALUES
 (501, 'David','Guetta',4,40,15.45);
 ```
 
-![This is a alt text.](/Screenshots/07.png "artists")
+![](/Screenshots/07.png "artists")
 
 5.4 Just to make sure that relations have been setup properly, let's check the database schema with MySQL Workbench.
 
-![This is a alt text.](/Screenshots/08.png "workbench")
+![](/Screenshots/08.png "workbench")
 
 5.5 Also let's check the data in every table, just to make sure it's in place and set up properly.
 
-![This is a alt text.](/Screenshots/09.png "countries")
-![This is a alt text.](/Screenshots/010.png "labels")
-![This is a alt text.](/Screenshots/011.png "artists")
+![](/Screenshots/09.png "countries")
+![](/Screenshots/010.png "labels")
+![](/Screenshots/011.png "artists")
 
 
 ### 6. Construct and execute SELECT operator with WHERE, GROUP BY and ORDER BY
@@ -210,7 +210,7 @@ mysql> SELECT artists.artist_id, artists.first_name, artists.last_name, countrie
 `CREATE USER 'testuser'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Password123#@!';`
 
 8.2 Make sure he exists
-![This is a alt text.](/Screenshots/012.png "testuser")
+![](/Screenshots/012.png "testuser")
 
 8.3 We need to give him access rights 
 `GRANT CREATE, INSERT, UPDATE, SELECT on Music.countries TO 'testuser'@'localhost' WITH GRANT OPTION;`
@@ -295,7 +295,7 @@ Let's make a backup of my `Music` database using `mysqldump` command. The result
 
 `mysqldump -u root -p Music > ~/Desktop/EPAM-L1/L1/Homework\ #2.\ Databases/Music.sql`
 
-![This is a alt text.](/Screenshots/013.png "mysqldump")
+![](/Screenshots/013.png "mysqldump")
 
 Database dump has been created sucessfully.
 
@@ -443,102 +443,91 @@ mysql> SELECT * FROM artists;
 
 13.1 Let's create a database instance in AWS via AWS console and waiting for its creation.
 
-![This is a alt text.](/Screenshots/aws1.png "aws")
-![This is a alt text.](/Screenshots/aws2.png "aws")
-![This is a alt text.](/Screenshots/aws3.png "aws")
-![This is a alt text.](/Screenshots/aws4.png "aws")
-![This is a alt text.](/Screenshots/aws5.png "aws")
-![This is a alt text.](/Screenshots/aws6.png "aws")
-![This is a alt text.](/Screenshots/aws7.png "aws")
-![This is a alt text.](/Screenshots/aws8.png "aws")
-![This is a alt text.](/Screenshots/aws9.png "aws")
+![](/Screenshots/aws1.png "aws")
+![](/Screenshots/aws2.png "aws")
+![](/Screenshots/aws3.png "aws")
+![](/Screenshots/aws4.png "aws")
+![](/Screenshots/aws5.png "aws")
+![](/Screenshots/aws6.png "aws")
+![](/Screenshots/aws7.png "aws")
+![](/Screenshots/aws8.png "aws")
+![](/Screenshots/aws9.png "aws")
 
 13.2 I already have a security group called `mysql`. I have 2 inbound rules to make sure that `port 3306` and `port 22` are opened for connections.
 
-![This is a alt text.](/Screenshots/aws10.png "aws")
+![](/Screenshots/aws10.png "aws")
 
 13.3 Let's connect to the database via `MySQL Workbench` using connection endpoint from AWS Console `epam-hometask.crbhgjidnxqd.eu-central-1.rds.amazonaws.com`.
 
-![This is a alt text.](/Screenshots/aws11.png "aws")
-![This is a alt text.](/Screenshots/aws12.png "aws")
+![](/Screenshots/aws11.png "aws")
+![](/Screenshots/aws12.png "aws")
 
 13.4 Let's transfer our database from `localhost` to `RDS instance` using `Migation Wizard`
 
-![This is a alt text.](/Screenshots/msql1.png "msql")
-![This is a alt text.](/Screenshots/msql2.png "msql")
-![This is a alt text.](/Screenshots/msql3.png "msql")
-![This is a alt text.](/Screenshots/msql4.png "msql")
-![This is a alt text.](/Screenshots/msql5.png "msql")
-![This is a alt text.](/Screenshots/msql6.png "msql")
-![This is a alt text.](/Screenshots/msql7.png "msql")
-![This is a alt text.](/Screenshots/msql8.png "msql")
-![This is a alt text.](/Screenshots/msql9.png "msql")
-![This is a alt text.](/Screenshots/msql10.png "msql")
-![This is a alt text.](/Screenshots/msql11.png "msql")
-![This is a alt text.](/Screenshots/msql12.png "msql")
-![This is a alt text.](/Screenshots/msql13.png "msql")
-![This is a alt text.](/Screenshots/msql14.png "msql")
-![This is a alt text.](/Screenshots/msql15.png "msql")
-![This is a alt text.](/Screenshots/msql16.png "msql")
+![](/Screenshots/msql1.png "msql")
+![](/Screenshots/msql2.png "msql")
+![](/Screenshots/msql3.png "msql")
+![](/Screenshots/msql4.png "msql")
+![](/Screenshots/msql5.png "msql")
+![](/Screenshots/msql6.png "msql")
+![](/Screenshots/msql7.png "msql")
+![](/Screenshots/msql8.png "msql")
+![](/Screenshots/msql9.png "msql")
+![](/Screenshots/msql10.png "msql")
+![](/Screenshots/msql11.png "msql")
+![](/Screenshots/msql12.png "msql")
+![](/Screenshots/msql13.png "msql")
+![](/Screenshots/msql14.png "msql")
+![](/Screenshots/msql15.png "msql")
+![](/Screenshots/msql16.png "msql")
 
 ### 14. Connect to your database via shell and make sure the data exists
 
 >I'm going to connect to RDS instance using shell, i am pretty sure that it works as expected, since i already connected to the instance using MySQL Workbench.
 
-![This is a alt text.](/Screenshots/shell1.png "shell1")
+![](/Screenshots/shell1.png "shell1")
 
 
 ### 15. Execute SELECT operator similar step 6.
 
-![This is a alt text.](/Screenshots/shell2.png "shell1")
-![This is a alt text.](/Screenshots/shell3.png "shell1")
-![This is a alt text.](/Screenshots/shell4.png "shell1")
+![](/Screenshots/shell2.png "shell1")
+![](/Screenshots/shell3.png "shell1")
+![](/Screenshots/shell4.png "shell1")
 
 ### 16. Create the dump of your database.
 
 16.1 Let's add a couple of rows to our RDS DB `Music`, so that our local database will be slightly different
 
-![This is a alt text.](/Screenshots/shell5.png "shell1")
+![](/Screenshots/shell5.png "shell1")
 
 16.2 Let's make a backup of our RDS DB `Music` and store it on local machine
 
-![This is a alt text.](/Screenshots/back1.png "back")
-![This is a alt text.](/Screenshots/back2.png "back")
-![This is a alt text.](/Screenshots/back3.png "back")
+![](/Screenshots/back1.png "back")
+![](/Screenshots/back2.png "back")
+![](/Screenshots/back3.png "back")
 
 16.3 Let's import it to our local database and make sure that data is in place
 
-![This is a alt text.](/Screenshots/imp1.png "imp")
-![This is a alt text.](/Screenshots/imp2.png "imp")
-![This is a alt text.](/Screenshots/imp3.png "imp")
-![This is a alt text.](/Screenshots/imp4.png "imp")
+![](/Screenshots/imp1.png "imp")
+![](/Screenshots/imp2.png "imp")
+![](/Screenshots/imp3.png "imp")
+![](/Screenshots/imp4.png "imp")
 
-> I used `MySQL Workbench` intentionally since i wanted to show this task more visually and i personally like it. I guess, common practice is to use the comamnd below to make a database dump, which of course might save some time when needed.
-```
-mysqldump -h source_MySQL_DB_instance_endpoint \
-    -u user \
-    -ppassword \
-    --port=3306 \
-    --single-transaction \
-    --routines \
-    --triggers \
-    --databases  database database2 > path/rds-dump.sql
-```
 
 ## Part 3
 ### 17. Create a database. Use the use command to connect to a new database (If it doesn't exist, Mongo will create it when you write to it)
 
 17.1 I have MongoDB installed in docker, since i have Ubuntu 22.04 and it doesn't work properly without container. Let's check if container exists.
 
-![This is a alt text.](/Screenshots/014.png "docker")
+![](/Screenshots/014.png "docker")
 
 17.2 Let's launch MongoDB in Docker with volume.
 
-![This is a alt text.](/Screenshots/015.png "volume")
+![](/Screenshots/015.png "volume")
 
 17.2 Let's dive into container and open MongoDB Shell
 
-![This is a alt text.](/Screenshots/016.png "mongosh")
+![](/Screenshots/016.png "mongosh")
 
 ### 18. Create a collection. Use db.createCollection to create a collection. I'll leave the subject up to you. Run show dbs and show collections to view your database and collections
 
