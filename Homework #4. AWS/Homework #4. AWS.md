@@ -30,7 +30,47 @@
 
 #### 7. Review Getting Started with Amazon EC2. Log Into Your AWS Account, Launch, Configure, Connect and Terminate Your Instance. Do not use Amazon Lightsail. It is recommended to use the t2 or t3.micro instance and the CentOS operating system.
 
+Screenshot below shows the instance settings/state/address/etc, it also show that i succesfully logged in with my private key via ssh. 
+
+First one is Amazon Linux
+
+![](/Screenshots/aws_3.png "aws_3")
+
+Second is RHEL
+
+![](/Screenshots/aws_4.png "aws_4")
 
 
+#### 8. Create a snapshot of your instance to keep as a backup.
 
+![](/Screenshots/aws_5.png "aws_5")
 
+#### 9. Create and attach a Disk_D (EBS) to your instance to add more storage space. Create and save some file on Disk_D.
+
+![](/Screenshots/aws_6.png "aws_6")
+
+![](/Screenshots/aws_7.png "aws_7")
+
+![](/Screenshots/aws_8.png "aws_8")
+
+#### 10. Launch the second instance from backup.
+
+Requesting a new image creation from my snapshot
+
+![](/Screenshots/aws_9.png "aws_9")
+
+Launching the instance from my image
+
+![](/Screenshots/aws_10.png "aws_10")
+
+![](/Screenshots/aws_11.png "aws_11")
+
+#### 11. Detach Disk_D from the 1st instance and attach disk_D to the new instance.
+
+![](/Screenshots/aws_12.png "aws_12")
+
+![](/Screenshots/aws_13.png "aws_13")
+
+#### 12. Review the 10-minute example. Explore the possibilities of creating your own domain and domain name for your site. Note, that Route 53 not free service. Alternatively you can free register the domain name *.PP.UA and use it
+
+- [x] [Video Example](https://aws.amazon.com/getting-started/hands-on/get-a-domain/?nc1=h_ls) - I'll use Route53 further below
