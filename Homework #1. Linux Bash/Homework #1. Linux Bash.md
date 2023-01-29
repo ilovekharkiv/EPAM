@@ -5,8 +5,7 @@
 1. When starting without parameters, it will display a list of possible keys and their description.
 2. The --all key displays the IP addresses and symbolic names of all hosts in the current subnet
 3. The --target key displays a list of open system TCP ports.
-The code that performs the functionality of each of the subtasks must be placed in a separate function.
-> I did `Part a` script as a separate sections of `case` statement without writing separate functions, i thought it's more convenient in this case particularly. Also, i used `arp-scan` since `nmap` was prohibited by our bash lecturer.
+The code that performs the functionality of each of the subtasks must be placed in a separate function
 
 **Here is the script itselft. It is also uploaded to the current folder of this repo and called `part_a.sh`**
 
@@ -28,7 +27,7 @@ case $1 in
   esac
 ```
 **You'll find the screenshot with output of the script below:**
-![This is a alt text.](/Screenshots/linux_bash_1.png "Script output")
+![](/Screenshots/linux_bash_1.png "Script output")
 
 
 ## [Part B. Using Apache log example create a script to answer the following questions](https://github.com/ilovekharkiv/EPAM-L1/blob/master/Homework%20%231.%20Linux%20Bash/Homework%20%231.%20Linux%20Bash.md#part-b-using-apache-log-example-create-a-script-to-answer-the-following-questions) 
@@ -99,10 +98,8 @@ search_bots
 ```bash
 Which ip were the most requests from?
   29 94.78.95.154
-  
 What is the most requested page?
   59 "https://www.google.ru/"
-  
 How many requests were there from each ip?
    3 66.102.9.32
    3 31.173.84.130
@@ -169,10 +166,8 @@ What non-existent pages were clients referred to?
 "http://example.com/ehsteticheskaya-medicina/injekcii/oblasti-lica-dlya-primeneniya-kozhnykh-fi.html"
 "http://example.com/ehsteticheskaya-medicina/injekcii/biorevitalizaciya/preparaty-dlya-biorevitalizacii.html"
 "-"
-
 What time did site get the most requests?
    4 [25/Apr/2017:11:40:56 +0400]
-   
 What search bots have accessed the site? UA + IP 
 217.182.132.183 AhrefsBot/5.2; +http://ahrefs.com/robot/)"
 207.46.13.3 bingbot/2.0; +http://www.bing.com/bingbot.htm)"
@@ -215,25 +210,25 @@ echo -e "Backup has been finished. Current time is $TIMESTAMP"
 
 **I'd like to use `EPAM` folder for my script. Let's `ls -l` to make sure that `EPAM` foler exists**
 
-![This is a alt text.](/Screenshots/linux_bash_c1.png "linux_bash")
+![](/Screenshots/linux_bash_c1.png "linux_bash")
 
 
 **Let's make a backup of `~/Desktop/EPAM/` folder and name it as `EPAM_COPY`**
 
-![This is a alt text.](/Screenshots/linux_bash_c2.png "linux_bash")
+![](/Screenshots/linux_bash_c2.png "linux_bash")
 
 **Let's check the log file, it's called `backup_log.log` as per the name in our script**
 
-![This is a alt text.](/Screenshots/linux_bash_c3.png "linux_bash")
+![](/Screenshots/linux_bash_c3.png "linux_bash")
 
 **Now it's time to automate the job and add it to `crontab`. Let's make sure that `cron` is running**
 
-![This is a alt text.](/Screenshots/linux_bash_c4.png "linux_bash")
+![](/Screenshots/linux_bash_c4.png "linux_bash")
 
 **Let's add our script to the `crontab -e` and check the results with `crontab -l`**
 
-![This is a alt text.](/Screenshots/linux_bash_c5.png "linux_bash")
-![This is a alt text.](/Screenshots/linux_bash_c6.png "linux_bash")
+![](/Screenshots/linux_bash_c5.png "linux_bash")
+![](/Screenshots/linux_bash_c6.png "linux_bash")
 
 **Finally, let's check script execution by `cron`**
 1. Add file.txt to EPAM folder
@@ -241,5 +236,5 @@ echo -e "Backup has been finished. Current time is $TIMESTAMP"
 3. Delete file.txt from EPAM folder
 4. Wait until it is deleted from EPAM_COPY
 
-![This is a alt text.](/Screenshots/linux_bash_c7.png "linux_bash")
-![This is a alt text.](/Screenshots/linux_bash_c8.png "linux_bash")
+![](/Screenshots/linux_bash_c7.png "linux_bash")
+![](/Screenshots/linux_bash_c8.png "linux_bash")
