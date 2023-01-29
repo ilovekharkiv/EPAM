@@ -14,5 +14,21 @@
 
 - [x] [AWS Well-Architected Labs](https://www.wellarchitectedlabs.com/)
 
-
 #### 4. Register and pass courses on AWS Educate. Filter by checking Topic Cloud Computing and Foundational Level. Feel free to pass more.
+
+- [x] [AWS Educate](https://www.awseducate.com/student/s/)
+
+#### 5. Register and pass free courses on AWS Skillbuilder. AWS Cloud Practitioner Essentials: Core Services, AWS Cloud Practitioner Essentials: Cloud Сoncepts. Try AWS Cloud Quest: Cloud Practitioner.
+
+- [x] [AWS Skillbuilder](https://skillbuilder.aws/)
+
+![](/Screenshots/aws_2.png "aws_2")
+
+#### 6. Pass Free courses on Amazon qwiklabs
+
+- [x] [Amazon Qwiklabs](https://amazon.qwiklabs.com/)
+
+#### 7. Review Getting Started with Amazon EC2. Log Into Your AWS Account, Launch, Configure, Connect and Terminate Your Instance. Do not use Amazon Lightsail. It is recommended to use the t2 or t3.micro instance and the CentOS operating system.
+
+
+
