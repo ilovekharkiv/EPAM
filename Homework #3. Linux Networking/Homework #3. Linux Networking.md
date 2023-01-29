@@ -195,6 +195,8 @@ Client_1 та Client_2 – Віртуальні машини, на яких ро
 Налаштуємо NAT сервіс за допомогою команди нижче, додамо правило до `iptables` на `Server_1` 
 
     sudo iptables -t nat -A POSTROUTING -o enp0s3 -j MASQUERADE && iptables-save
+    
+>Попередньо треба включити на Server_1 ip-forwarding за допомогою команди `sysctl -w net.ipv4.ip_forward=1`
 
 ![](/Screenshots/nat.png "iptables")
 
