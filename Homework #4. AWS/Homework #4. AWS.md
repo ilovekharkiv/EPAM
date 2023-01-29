@@ -71,6 +71,56 @@ Launching the instance from my image
 
 ![](/Screenshots/aws_13.png "aws_13")
 
+![](/Screenshots/aws_14.png "aws_14")
+
 #### 12. Review the 10-minute example. Explore the possibilities of creating your own domain and domain name for your site. Note, that Route 53 not free service. Alternatively you can free register the domain name *.PP.UA and use it
 
 - [x] [Video Example](https://aws.amazon.com/getting-started/hands-on/get-a-domain/?nc1=h_ls) - I'll use Route53 further below
+
+### 13. Launch and configure a WordPress instance with Amazon Lightsail link
+
+- [x] [Lightsail](https://lightsail.aws.amazon.com/)
+
+![](/Screenshots/aws_15.png "aws_15")
+
+![](/Screenshots/aws_16.png "aws_16")
+
+#### 14. Review the 10-minute Store and Retrieve a File. Repeat, creating your own repository.
+
+- [x] [Store and Retrieve](https://aws.amazon.com/ru/getting-started/hands-on/backup-files-to-amazon-s3/)
+
+- [x] Create repo + Upload
+
+![](/Screenshots/aws_17.png "aws_17")
+
+- [x] Download
+
+![](/Screenshots/aws_18.png "aws_18")
+
+#### 15. Review the 10-minute example Batch upload files to the cloud to Amazon S3 using the AWS CLI. Create a user AWS IAM, configure CLI AWS and upload any files to S3.
+
+- [x] [Batch upload](https://aws.amazon.com/getting-started/hands-on/backup-to-s3-cli/?nc1=h_ls)
+
+- [x] IAM user is created with the S3 bucket full access policies
+
+![](/Screenshots/aws_19.png "aws_19")
+
+Let's upload a couple of files
+
+![](/Screenshots/aws_20.png "aws_20")
+![](/Screenshots/aws_21.png "aws_21")
+
+Let's delete the files
+
+![](/Screenshots/aws_22.png "aws_22")
+
+16. Review the 10-minute example Deploy Docker Containers on Amazon Elastic Container Service
+(Amazon ECS). Repeat, create a cluster, and run the online demo application or better other
+application with custom settings.
+17. Run a Serverless "Hello, World!" with AWS Lambda.
+18. Create a static website on Amazon S3, publicly available (link1 or link2 - using a custom domain
+registered with Route 53). Post on the page your own photo, the name of the educational
+program (EPAM Cloud&DevOps Fundamentals Autumn 2022), the list of AWS services with
+which the student worked within the educational program or earlier and the full list with links
+of completed labs (based on tutorials or qwiklabs). Provide the link to the website in your report
+and СV.
