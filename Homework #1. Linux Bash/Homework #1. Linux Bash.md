@@ -26,6 +26,9 @@ case $1 in
   ;;
   esac
 ```
+
+>I used arp-scan because `nmap` was prohibited by our lecturer.
+
 **You'll find the screenshot with output of the script below:**
 ![](/Screenshots/linux_bash_1.png "Script output")
 
