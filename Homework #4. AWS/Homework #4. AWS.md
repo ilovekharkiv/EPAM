@@ -1,6 +1,6 @@
 #### 1. Read the terms of Using the AWS Free Tier and the ability to control their own costs.
 
-- [x]([Billing Free Tier](https://docs.aws.amazon.com/en_us/awsaccountbilling/latest/aboutv2/billing-free-tier.html))
+- [x] ([Billing Free Tier](https://docs.aws.amazon.com/en_us/awsaccountbilling/latest/aboutv2/billing-free-tier.html))
 
 #### 2. Register with AWS (first priority) or alternatively, you can request access to courses in AWS Academy if you are currently a student of certain University.
 
