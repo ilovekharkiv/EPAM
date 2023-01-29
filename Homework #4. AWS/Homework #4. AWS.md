@@ -4,7 +4,9 @@
 
 #### 2. Register with AWS (first priority) or alternatively, you can request access to courses in AWS Academy if you are currently a student of certain University.
 
-- [x] ![](/Screenshots/aws_1.png "aws_1")
+![](/Screenshots/aws_1.png "aws_1")
+
+- [x] Done
 
 #### 3. Find the hands-on tutorials and AWS Well-Architected Labs for your AWS needs. Explore list of step-by-step tutorials for deferent category. Use, repeat as many as you can and have fun))
 
