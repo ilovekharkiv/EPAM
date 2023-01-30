@@ -124,13 +124,20 @@ Let's delete the files
 
 ![](/Screenshots/aws_24.png "aws_24")
 
+- [x] I also used EC2 + Docker to run an image and push it to ECR for testing purposes
+
+![](/Screenshots/aws_25.png "aws_25")
+![](/Screenshots/aws_26.png "aws_26")
+![](/Screenshots/aws_27.png "aws_27")
+
+- [x] Launched the container via Amazon ECS using my image that i pushed in a previous step
+
+![](/Screenshots/aws_28.png "aws_28")
+
 #### 17. Run a Serverless "Hello, World!" with AWS Lambda.
 
 ![](/Screenshots/lambda_1.png "lambda_1") 
 
-18. Create a static website on Amazon S3, publicly available (link1 or link2 - using a custom domain
-registered with Route 53). Post on the page your own photo, the name of the educational
-program (EPAM Cloud&DevOps Fundamentals Autumn 2022), the list of AWS services with
-which the student worked within the educational program or earlier and the full list with links
-of completed labs (based on tutorials or qwiklabs). Provide the link to the website in your report
-and СV.
+#### 18. Create a static website on Amazon S3, publicly available (link1 or link2 - using a custom domain registered with Route 53).Post on the page your own photo, the name of the educational program (EPAM Cloud&DevOps Fundamentals Autumn 2022), the list of AWS services with which the student worked within the educational program or earlier and the full list with links of completed labs (based on tutorials or qwiklabs). Provide the link to the website in your report and СV.
+
+
