@@ -114,10 +114,14 @@ Let's delete the files
 
 ![](/Screenshots/aws_22.png "aws_22")
 
-16. Review the 10-minute example Deploy Docker Containers on Amazon Elastic Container Service
-(Amazon ECS). Repeat, create a cluster, and run the online demo application or better other
-application with custom settings.
-17. Run a Serverless "Hello, World!" with AWS Lambda.
+#### 16. Review the 10-minute example Deploy Docker Containers on Amazon Elastic Container Service (Amazon ECS). Repeat, create a cluster, and run the online demo application or better other application with custom settings.
+
+
+
+#### 17. Run a Serverless "Hello, World!" with AWS Lambda.
+
+![](/Screenshots/lambda_1.png "lambda_1") 
+
 18. Create a static website on Amazon S3, publicly available (link1 or link2 - using a custom domain
 registered with Route 53). Post on the page your own photo, the name of the educational
 program (EPAM Cloud&DevOps Fundamentals Autumn 2022), the list of AWS services with
