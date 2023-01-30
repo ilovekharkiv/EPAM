@@ -127,7 +127,6 @@ Let's delete the files
 - [x] I also used EC2 + Docker to run an image and push it to ECR for testing purposes
 
 ![](/Screenshots/aws_25.png "aws_25")
-![](/Screenshots/aws_26.png "aws_26")
 ![](/Screenshots/aws_27.png "aws_27")
 
 - [x] Launched the container via Amazon ECS using my image that i pushed in a previous step
