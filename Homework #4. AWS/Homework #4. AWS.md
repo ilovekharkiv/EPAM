@@ -105,18 +105,24 @@ Launching the instance from my image
 
 ![](/Screenshots/aws_19.png "aws_19")
 
-Let's upload a couple of files
+- [x] AWS CLI is configured
 
 ![](/Screenshots/aws_20.png "aws_20")
+
+Let's upload a couple of files
+
 ![](/Screenshots/aws_21.png "aws_21")
+![](/Screenshots/aws_22.png "aws_22")
 
 Let's delete the files
 
-![](/Screenshots/aws_22.png "aws_22")
+![](/Screenshots/aws_23.png "aws_23")
 
 #### 16. Review the 10-minute example Deploy Docker Containers on Amazon Elastic Container Service (Amazon ECS). Repeat, create a cluster, and run the online demo application or better other application with custom settings.
 
+- [x] I used Fargate Sample App. Unfortunately, guide that was provided by our lecturer is currently irrelevant. AWS has already updated the deployment.
 
+![](/Screenshots/aws_24.png "aws_24")
 
 #### 17. Run a Serverless "Hello, World!" with AWS Lambda.
 
