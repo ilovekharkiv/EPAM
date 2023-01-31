@@ -1,4 +1,4 @@
-### http://abolmasovp.click/ - static website
+### http://abolmasovp.click/ - my personal static website hosted on S3
 ---
 
 #### 1. Read the terms of Using the AWS Free Tier and the ability to control their own costs.
