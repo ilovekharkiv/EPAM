@@ -1,3 +1,6 @@
+# http://abolmasovp.click/ - static website
+
+
 #### 1. Read the terms of Using the AWS Free Tier and the ability to control their own costs.
 
 - [x] [Billing Free Tier](https://docs.aws.amazon.com/en_us/awsaccountbilling/latest/aboutv2/billing-free-tier.html) - my free tier is actually has come to an end, my AWS account is about 1+ year old.
@@ -138,5 +141,7 @@ Let's delete the files
 ![](/Screenshots/lambda_1.png "lambda_1") 
 
 #### 18. Create a static website on Amazon S3, publicly available (link1 or link2 - using a custom domain registered with Route 53).Post on the page your own photo, the name of the educational program (EPAM Cloud&DevOps Fundamentals Autumn 2022), the list of AWS services with which the student worked within the educational program or earlier and the full list with links of completed labs (based on tutorials or qwiklabs). Provide the link to the website in your report and СV.
+
+## http://abolmasovp.click/
 
 
